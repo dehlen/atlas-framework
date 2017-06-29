@@ -1,11 +1,3 @@
-//
-//  Atlas.h
-//  Atlas
-//
-//  Created by Engel, Stefan on 22.06.17.
-//  Copyright © 2017 dm-drogerie markt GmbH + Co. KG. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 //! Project version number for Atlas.
