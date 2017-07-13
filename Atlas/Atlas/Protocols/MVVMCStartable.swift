@@ -1,0 +1,3 @@
+protocol MVVMCStartable {
+    func start()
+}

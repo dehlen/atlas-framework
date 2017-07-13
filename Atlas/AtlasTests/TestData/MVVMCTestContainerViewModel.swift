@@ -5,7 +5,7 @@ class MVVMCTestContainerViewModel: MVVMCContainerViewModelProtocol {
         return testView ?? UIView()
     }
     
-    var title = ""
+    var title = "test view"
     
     var coordinatorDelegate: MVVMCViewModelDelegate?
     var testView: UIView?

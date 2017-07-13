@@ -61,6 +61,16 @@ class MVVMCContainerTests: QuickSpec {
                             
                             expect(sut!.view.subviews[0]).to(beAnInstanceOf(RedTestView.self))
                         }
+                        
+                        it("sets the title of the red test view") {
+                            let nav = UINavigationController()
+                            nav.viewControllers = [sut!]
+                            sut!.viewModel = viewModel as! MVVMCContainerViewModelProtocol?
+                            sut!.preloadView()
+                            sut!.viewWillAppear(false)
+                            
+                            expect(nav.topViewController?.navigationItem.title).to(equal("test view"))
+                        }
                     }
                 }
                 

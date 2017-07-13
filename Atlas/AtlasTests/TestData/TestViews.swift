@@ -19,3 +19,7 @@ class GreenTestView: UIView, MVVMCContentViewDelegate {
         
     }
 }
+
+class BlueTestView: UIView {
+    
+}
