@@ -1,4 +1,4 @@
-@testable import Atlas
+import Atlas
 
 enum TestTargets: MVVMCNavigationTarget {
     case green

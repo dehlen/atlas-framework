@@ -1,4 +1,4 @@
-@testable import Atlas
+import Atlas
 
 class MVVMCContentViewDelegateMock: MVVMCContentViewDelegate {
     var didCallContainerDidLoad = false

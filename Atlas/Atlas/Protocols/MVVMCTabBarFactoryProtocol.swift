@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MVVMCTabBarFactoryProtocol: MVVMCFactoryProtocol {
+public protocol MVVMCTabBarFactoryProtocol: MVVMCFactoryProtocol {
     var selectedTabBarIconImage: UIImage? { get }
     var unselectedTabBarIconImage: UIImage? { get }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MVVMCViewModelProtocol {
+public protocol MVVMCViewModelProtocol {
     var coordinatorDelegate: MVVMCViewModelDelegate? { get set }
     
     init(model: MVVMCModelProtocol)

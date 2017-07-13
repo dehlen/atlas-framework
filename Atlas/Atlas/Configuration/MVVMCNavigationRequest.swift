@@ -1,4 +1,4 @@
-enum MVVMCNavigationRequest {
+public enum MVVMCNavigationRequest {
     case dismiss
     case request(target: MVVMCNavigationTarget)
     

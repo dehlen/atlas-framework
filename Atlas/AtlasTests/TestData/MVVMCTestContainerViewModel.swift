@@ -1,4 +1,4 @@
-@testable import Atlas
+import Atlas
 
 class MVVMCTestContainerViewModel: MVVMCContainerViewModelProtocol {
     var view: UIView {

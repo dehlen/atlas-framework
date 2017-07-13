@@ -1,6 +1,6 @@
 import UIKit
 
-@testable import Atlas
+import Atlas
 
 class RedTestView: UIView {
     

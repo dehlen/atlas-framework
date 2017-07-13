@@ -1,4 +1,4 @@
-enum MVVMCTransitionType {
+public enum MVVMCTransitionType {
     case modal
     case push
 }

@@ -1,3 +1,3 @@
-protocol MVVMCStartable {
+public protocol MVVMCStartable {
     func start()
 }

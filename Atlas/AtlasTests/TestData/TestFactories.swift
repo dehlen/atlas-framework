@@ -1,4 +1,4 @@
-@testable import Atlas
+import Atlas
 
 class StateFactory: MVVMCFactoryProtocol {
     var transitionType = MVVMCTransitionType.push

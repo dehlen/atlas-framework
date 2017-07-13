@@ -1,6 +1,6 @@
 import UIKit
 
-class MVVMCAppCoordinator: NSObject {
+public class MVVMCAppCoordinator: NSObject {
     let model: MVVMCModelProtocol
     let window: UIWindow
     let factories: [MVVMCTabBarFactoryProtocol]
@@ -8,7 +8,7 @@ class MVVMCAppCoordinator: NSObject {
     var navigationControllers: [UINavigationController] = []
     var coordinatorStack: [UINavigationController: MVVMCCoordinatorProtocol] = [:]
     
-    required init(model: MVVMCModelProtocol, window: UIWindow, factories: [MVVMCTabBarFactoryProtocol]) {
+    required public init(model: MVVMCModelProtocol, window: UIWindow, factories: [MVVMCTabBarFactoryProtocol]) {
         self.model = model
         self.window = window
         self.factories = factories
@@ -23,7 +23,7 @@ class MVVMCAppCoordinator: NSObject {
         window.rootViewController = tabBar
     }
     
-    func start() {
+    public func start() {
         startTab(viewController: navigationControllers[0])
     }
     
@@ -70,7 +70,7 @@ class MVVMCAppCoordinator: NSObject {
 
 // MARK: - UITabBarControllerDelegate
 extension MVVMCAppCoordinator: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         guard let viewController = viewController as? UINavigationController else {
             return
         }
