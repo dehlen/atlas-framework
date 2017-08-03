@@ -9,6 +9,9 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     func start() {
     }
     
+    func startWithViewController() {
+    }
+    
     func viewModel(_ viewModel: MVVMCViewModelProtocol, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
         didCallViewModelRequestsWithData = true
         if request == .dismiss {
@@ -16,7 +19,7 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
         }
     }
     
-    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol) {
+    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol, transitionType: MVVMCTransitionType) {
         didCallCoordinatorRequestsDismissal = true
     }
 }

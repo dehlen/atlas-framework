@@ -49,6 +49,7 @@
 		2CF34BCB1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BCA1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift */; };
 		2CF34BCD1EFBC01E00BF531B /* TestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BCC1EFBC01E00BF531B /* TestViews.swift */; };
 		2CF34BCF1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BCE1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift */; };
+		2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		2CF34BCA1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCTestContainerViewModel.swift; sourceTree = "<group>"; };
 		2CF34BCC1EFBC01E00BF531B /* TestViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViews.swift; sourceTree = "<group>"; };
 		2CF34BCE1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCContentViewDelegateMock.swift; sourceTree = "<group>"; };
+		2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 				2CCB99F51F04F1B500C95527 /* TestFactories.swift */,
 				2CCB99F71F04F8C900C95527 /* TestTargets.swift */,
 				2C374C091F176554002F4CD1 /* TestImages.xcassets */,
+				2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */,
 			);
 			path = TestData;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				2CF34BCB1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift in Sources */,
 				2CF34BCF1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift in Sources */,
 				2C374C0D1F17676D002F4CD1 /* ImageMatcherTests.swift in Sources */,
+				2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */,
 				2C374C0E1F17676D002F4CD1 /* ImageMatcher.swift in Sources */,
 				2CF34BC81EFBBBF300BF531B /* ModelMock.swift in Sources */,
 				2C374C081F176262002F4CD1 /* MVVMCAppCoordinatorTests.swift in Sources */,

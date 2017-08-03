@@ -22,6 +22,11 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
         
         display(viewModel: viewModel, withTransitionType: factory.transitionType)
    }
+
+    func startWithViewController() {
+        let view = factory.createView(model: model, delegate: self)
+        display(view: view, withTransitionType: factory.transitionType)
+    }
 }
 
 // MARK: - transitions
@@ -38,13 +43,22 @@ extension MVVMCCoordinator {
                 navigationController.pushViewController(container, animated: false)
         }
     }
+
+    func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType) {
+        switch transitionType {
+            case .modal:
+                navigationController.present(view, animated: true)
+            case .push:
+                navigationController.pushViewController(view, animated: false)
+        }
+    }
 }
 
 // MARK: - MVVMCViewModelDelegate
 extension MVVMCCoordinator {
     func viewModel(_ viewModel: MVVMCViewModelProtocol, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
         switch request {
-            case .dismiss: coordinatorDelegate?.childCoordinatorRequestsDismissal(self)
+            case .dismiss: coordinatorDelegate?.childCoordinatorRequestsDismissal(self, transitionType: factory.transitionType)
             case .request(let target): navigateTo(target)
         }
     }
@@ -56,14 +70,17 @@ extension MVVMCCoordinator {
         
         targetCoordinator = MVVMCCoordinator(model: model, navigationController: navigationController, factory: targetFactory)
         targetCoordinator?.coordinatorDelegate = self
-        targetCoordinator?.start()
+        targetCoordinator?.startWithViewController()
     }
 }
 
 // MARK: - MVVMCChildCoordinatorDelegate
 extension MVVMCCoordinator {
-    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol) {
-        navigationController.dismiss(animated: true, completion: nil)
+    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol, transitionType: MVVMCTransitionType) {
+        switch transitionType {
+            case .push: navigationController.popViewController(animated: true)
+            case .modal: navigationController.dismiss(animated: true, completion: nil)
+        }
         targetCoordinator = nil
     }
 }

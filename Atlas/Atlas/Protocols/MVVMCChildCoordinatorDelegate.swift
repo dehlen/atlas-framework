@@ -1,3 +1,3 @@
 protocol MVVMCChildCoordinatorDelegate: class {
-    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol)
+    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol, transitionType: MVVMCTransitionType)
 }

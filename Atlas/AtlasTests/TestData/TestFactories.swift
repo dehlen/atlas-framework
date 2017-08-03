@@ -12,6 +12,10 @@ class StateFactory: MVVMCFactoryProtocol {
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return GreenFactory()
     }
+
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+        return RedTestViewController()
+    }
 }
 
 class GreenFactory: MVVMCFactoryProtocol {
@@ -26,6 +30,12 @@ class GreenFactory: MVVMCFactoryProtocol {
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return BlueFactory()
     }
+
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+        let vc = GreenTestViewController()
+        vc.delegate = delegate
+        return vc
+    }
 }
 
 class BlueFactory: MVVMCFactoryProtocol {
@@ -39,6 +49,10 @@ class BlueFactory: MVVMCFactoryProtocol {
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
+    }
+
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+        return UIViewController()
     }
 }
 
@@ -57,6 +71,10 @@ class Feature1Factory: MVVMCTabBarFactoryProtocol {
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
     }
+
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+        return UIViewController()
+    }
 }
 
 class Feature2Factory: MVVMCTabBarFactoryProtocol {
@@ -73,5 +91,9 @@ class Feature2Factory: MVVMCTabBarFactoryProtocol {
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
+    }
+
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+        return UIViewController()
     }
 }
