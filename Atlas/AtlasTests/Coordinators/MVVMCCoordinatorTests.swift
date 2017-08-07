@@ -21,7 +21,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                 }
             }
 
-            context("with login view") {
+            context("with stateFactory") {
                 context("after calling start()") {
                     var sut: MVVMCCoordinator?
                     var navController: UINavigationController?
@@ -52,7 +52,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                 }
             }
             
-            context("with productsView") {
+            context("with stateFactory") {
                 context("after calling start()") {                    
                     context("calling viewModel requestTransition") {
                         it("displays the green test view") {
@@ -70,6 +70,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                             expect(navigation.topViewController).to(beAnInstanceOf(GreenTestViewController.self))
                         }
 
+                        //commented out due to Window requesting client id
                         xit("displays the blue test view") {
                             let model = ModelMock()
                             let factory = BlueFactory()
