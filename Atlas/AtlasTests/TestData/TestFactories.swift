@@ -3,17 +3,11 @@ import Atlas
 class StateFactory: MVVMCFactoryProtocol {
     var transitionType = MVVMCTransitionType.push
     
-    func viewModel(model: MVVMCModelProtocol) -> MVVMCViewModelProtocol {
-        let testViewModel = MVVMCTestContainerViewModel(model: model)
-        testViewModel.testView = RedTestView()
-        return testViewModel
-    }
-    
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return GreenFactory()
     }
 
-    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
         return RedTestViewController()
     }
 }
@@ -21,17 +15,11 @@ class StateFactory: MVVMCFactoryProtocol {
 class GreenFactory: MVVMCFactoryProtocol {
     var transitionType = MVVMCTransitionType.push
     
-    func viewModel(model: MVVMCModelProtocol) -> MVVMCViewModelProtocol {
-        let testViewModel = MVVMCTestContainerViewModel(model: model)
-        testViewModel.testView = GreenTestView()
-        return testViewModel
-    }
-    
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return BlueFactory()
     }
 
-    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
         let vc = GreenTestViewController()
         vc.delegate = delegate
         return vc
@@ -41,17 +29,11 @@ class GreenFactory: MVVMCFactoryProtocol {
 class BlueFactory: MVVMCFactoryProtocol {
     var transitionType = MVVMCTransitionType.modal
     
-    func viewModel(model: MVVMCModelProtocol) -> MVVMCViewModelProtocol {
-        let testViewModel = MVVMCTestContainerViewModel(model: model)
-        testViewModel.testView = BlueTestView()
-        return testViewModel
-    }
-    
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
     }
 
-    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
         return UIViewController()
     }
 }
@@ -62,18 +44,14 @@ class Feature1Factory: MVVMCTabBarFactoryProtocol {
     
     var transitionType = MVVMCTransitionType.push
     
-    func viewModel(model: MVVMCModelProtocol) -> MVVMCViewModelProtocol {
-        let testViewModel = MVVMCTestContainerViewModel(model: model)
-        testViewModel.testView = GreenTestView()
-        return testViewModel
-    }
-    
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
     }
 
-    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
-        return UIViewController()
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
+        let vc = GreenTestViewController()
+        vc.delegate = delegate
+        return vc
     }
 }
 
@@ -83,17 +61,13 @@ class Feature2Factory: MVVMCTabBarFactoryProtocol {
     
     var transitionType = MVVMCTransitionType.push
     
-    func viewModel(model: MVVMCModelProtocol) -> MVVMCViewModelProtocol {
-        let testViewModel = MVVMCTestContainerViewModel(model: model)
-        testViewModel.testView = BlueTestView()
-        return testViewModel
-    }
-    
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
     }
 
-    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewModelDelegate) -> UIViewController {
-        return UIViewController()
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
+        let vc = BlueTestViewController()
+        vc.delegate = delegate
+        return vc
     }
 }

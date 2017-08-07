@@ -1,3 +1,4 @@
+import UIKit
 @testable import Atlas
 
 class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
@@ -12,14 +13,14 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     func startWithViewController() {
     }
     
-    func viewModel(_ viewModel: MVVMCViewModelProtocol, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
+    func view(_ viewController: UIViewController, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
         didCallViewModelRequestsWithData = true
         if request == .dismiss {
             didRequestDismissal = true
         }
     }
     
-    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol, transitionType: MVVMCTransitionType) {
+    func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol, transitionType: MVVMCTransitionType, animated: Bool) {
         didCallCoordinatorRequestsDismissal = true
     }
 }

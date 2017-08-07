@@ -16,21 +16,6 @@ class MVVMCCoordinatorTests: QuickSpec {
                         
                         sut.start()
                         
-                        expect(navigation.topViewController?.view.subviews[0]).to(beAnInstanceOf(RedTestView.self))
-                    }
-                }
-            }
-
-            context("after calling start()") {
-                context("being in default state") {
-                    it("displays the red test view") {
-                        let model = ModelMock()
-                        let factory = StateFactory()
-                        let navigation = UINavigationController()
-                        let sut = MVVMCCoordinator(model: model, navigationController: navigation, factory: factory)
-                        
-                        sut.startWithViewController()
-                        
                         expect(navigation.topViewController).to(beAnInstanceOf(RedTestViewController.self))
                     }
                 }
@@ -60,7 +45,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                         it("request its coordinatorDelegate to dismiss") {
                             let mock = MVVMCCoordinatorMock()
                             sut!.coordinatorDelegate = mock
-                            sut!.viewModel(factory.viewModel(model: ModelMock()), requestsNavigation: MVVMCNavigationRequest.dismiss, withData: nil)
+                            sut!.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.dismiss, withData: nil)
                             expect(mock.didCallCoordinatorRequestsDismissal).to(beTrue())
                         }
                     }
@@ -78,9 +63,9 @@ class MVVMCCoordinatorTests: QuickSpec {
                             
                             let sut = MVVMCCoordinator(model: model, navigationController: navigation, factory: factory)
                             
-                            sut.startWithViewController()
+                            sut.start()
                             
-                            sut.viewModel(MVVMCTestContainerViewModel(model: model), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
+                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
                             
                             expect(navigation.topViewController).to(beAnInstanceOf(GreenTestViewController.self))
                         }
@@ -99,9 +84,9 @@ class MVVMCCoordinatorTests: QuickSpec {
 
                             sut.start()
                             
-                            sut.viewModel(MVVMCTestContainerViewModel(model: model), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.blue), withData: nil)
+                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.blue), withData: nil)
                             
-                            expect(navigation.presentedViewController?.view?.subviews.first).to(beAnInstanceOf(BlueTestView.self))
+                            expect(navigation.presentedViewController).to(beAnInstanceOf(BlueTestViewController.self))
                         }
 
                         it("sets itself as coordinatorDelegate") {
@@ -114,12 +99,12 @@ class MVVMCCoordinatorTests: QuickSpec {
                             
                             sut.start()
                             
-                            sut.viewModel(MVVMCTestContainerViewModel(model: model), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
+                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
                             
                             expect(sut.targetCoordinator?.coordinatorDelegate).to(be(sut))
                         }
                         
-                        xit("dismisses the green test view") {
+                        it("dismisses the green test view") {
                             let model = ModelMock()
                             let factory = StateFactory()
                             
@@ -127,14 +112,14 @@ class MVVMCCoordinatorTests: QuickSpec {
 
                             let sut = MVVMCCoordinator(model: model, navigationController: navigation, factory: factory)
                             
-                            sut.startWithViewController()
+                            sut.start()
                             
-                            sut.viewModel(MVVMCTestContainerViewModel(model: model), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
+                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
                             
-                            sut.childCoordinatorRequestsDismissal(sut.targetCoordinator!, transitionType: factory.transitionType)
+                            sut.childCoordinatorRequestsDismissal(sut.targetCoordinator!, transitionType: factory.transitionType, animated: false)
                             
                             expect(navigation.presentedViewController).toEventually(beNil(), timeout: 2)
-                            expect(navigation.topViewController).toEventually(beAnInstanceOf(RedTestViewController.self), timeout: 10) // do we need a window???
+                            expect(navigation.topViewController).toEventually(beAnInstanceOf(RedTestViewController.self))
                         }
                     }
                 }

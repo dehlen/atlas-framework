@@ -26,16 +26,11 @@
 		2CCB99F81F04F8C900C95527 /* TestTargets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99F71F04F8C900C95527 /* TestTargets.swift */; };
 		2CEFC1C61EFBAE8F0013264C /* Atlas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFC1BC1EFBAE8F0013264C /* Atlas.framework */; };
 		2CEFC1CD1EFBAE8F0013264C /* Atlas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEFC1BF1EFBAE8F0013264C /* Atlas.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CF34B941EFBB30200BF531B /* MVVMCContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34B931EFBB30200BF531B /* MVVMCContainerView.swift */; };
-		2CF34B9A1EFBB36F00BF531B /* MVVMCModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34B961EFBB36F00BF531B /* MVVMCModelObserver.swift */; };
 		2CF34B9B1EFBB36F00BF531B /* MVVMCModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34B971EFBB36F00BF531B /* MVVMCModelProtocol.swift */; };
-		2CF34B9C1EFBB36F00BF531B /* MVVMCContainerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34B981EFBB36F00BF531B /* MVVMCContainerViewModelProtocol.swift */; };
-		2CF34B9D1EFBB36F00BF531B /* MVVMCContentViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34B991EFBB36F00BF531B /* MVVMCContentViewDelegate.swift */; };
 		2CF34BA11EFBB3D500BF531B /* UIView+ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BA01EFBB3D500BF531B /* UIView+ContainerView.swift */; };
 		2CF34BA31EFBB3F100BF531B /* UIView+Pinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BA21EFBB3F100BF531B /* UIView+Pinable.swift */; };
 		2CF34BA51EFBB43700BF531B /* Pinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BA41EFBB43700BF531B /* Pinable.swift */; };
-		2CF34BA71EFBB46800BF531B /* MVVMCViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BA61EFBB46800BF531B /* MVVMCViewModelProtocol.swift */; };
-		2CF34BA91EFBB47D00BF531B /* MVVMCViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BA81EFBB47D00BF531B /* MVVMCViewModelDelegate.swift */; };
+		2CF34BA91EFBB47D00BF531B /* MVVMCViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BA81EFBB47D00BF531B /* MVVMCViewDelegate.swift */; };
 		2CF34BAD1EFBB4CF00BF531B /* MVVMCNavigationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BAB1EFBB4CF00BF531B /* MVVMCNavigationRequest.swift */; };
 		2CF34BAE1EFBB4CF00BF531B /* MVVMCNavigationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BAC1EFBB4CF00BF531B /* MVVMCNavigationTarget.swift */; };
 		2CF34BB61EFBB6F200BF531B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF34BB01EFBB53400BF531B /* Quick.framework */; };
@@ -43,12 +38,8 @@
 		2CF34BBB1EFBB8EE00BF531B /* ContraintMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BBA1EFBB8EE00BF531B /* ContraintMatcher.swift */; };
 		2CF34BBD1EFBB8F700BF531B /* ConstraintMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BBC1EFBB8F700BF531B /* ConstraintMatcherTests.swift */; };
 		2CF34BBF1EFBB92300BF531B /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BBE1EFBB92300BF531B /* UIViewExtensionTests.swift */; };
-		2CF34BC21EFBB9F000BF531B /* MVVMCContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC11EFBB9F000BF531B /* MVVMCContainerTests.swift */; };
 		2CF34BC51EFBBA4700BF531B /* UIViewController+PreloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */; };
 		2CF34BC81EFBBBF300BF531B /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC71EFBBBF300BF531B /* ModelMock.swift */; };
-		2CF34BCB1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BCA1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift */; };
-		2CF34BCD1EFBC01E00BF531B /* TestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BCC1EFBC01E00BF531B /* TestViews.swift */; };
-		2CF34BCF1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BCE1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift */; };
 		2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,16 +76,11 @@
 		2CEFC1C01EFBAE8F0013264C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEFC1C51EFBAE8F0013264C /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEFC1CC1EFBAE8F0013264C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CF34B931EFBB30200BF531B /* MVVMCContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCContainerView.swift; sourceTree = "<group>"; };
-		2CF34B961EFBB36F00BF531B /* MVVMCModelObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCModelObserver.swift; sourceTree = "<group>"; };
 		2CF34B971EFBB36F00BF531B /* MVVMCModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCModelProtocol.swift; sourceTree = "<group>"; };
-		2CF34B981EFBB36F00BF531B /* MVVMCContainerViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCContainerViewModelProtocol.swift; sourceTree = "<group>"; };
-		2CF34B991EFBB36F00BF531B /* MVVMCContentViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCContentViewDelegate.swift; sourceTree = "<group>"; };
 		2CF34BA01EFBB3D500BF531B /* UIView+ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ContainerView.swift"; sourceTree = "<group>"; };
 		2CF34BA21EFBB3F100BF531B /* UIView+Pinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Pinable.swift"; sourceTree = "<group>"; };
 		2CF34BA41EFBB43700BF531B /* Pinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pinable.swift; sourceTree = "<group>"; };
-		2CF34BA61EFBB46800BF531B /* MVVMCViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCViewModelProtocol.swift; sourceTree = "<group>"; };
-		2CF34BA81EFBB47D00BF531B /* MVVMCViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCViewModelDelegate.swift; sourceTree = "<group>"; };
+		2CF34BA81EFBB47D00BF531B /* MVVMCViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCViewDelegate.swift; sourceTree = "<group>"; };
 		2CF34BAB1EFBB4CF00BF531B /* MVVMCNavigationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCNavigationRequest.swift; sourceTree = "<group>"; };
 		2CF34BAC1EFBB4CF00BF531B /* MVVMCNavigationTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCNavigationTarget.swift; sourceTree = "<group>"; };
 		2CF34BB01EFBB53400BF531B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -102,12 +88,8 @@
 		2CF34BBA1EFBB8EE00BF531B /* ContraintMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContraintMatcher.swift; sourceTree = "<group>"; };
 		2CF34BBC1EFBB8F700BF531B /* ConstraintMatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMatcherTests.swift; sourceTree = "<group>"; };
 		2CF34BBE1EFBB92300BF531B /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
-		2CF34BC11EFBB9F000BF531B /* MVVMCContainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCContainerTests.swift; sourceTree = "<group>"; };
 		2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PreloadView.swift"; sourceTree = "<group>"; };
 		2CF34BC71EFBBBF300BF531B /* ModelMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
-		2CF34BCA1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCTestContainerViewModel.swift; sourceTree = "<group>"; };
-		2CF34BCC1EFBC01E00BF531B /* TestViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViews.swift; sourceTree = "<group>"; };
-		2CF34BCE1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCContentViewDelegateMock.swift; sourceTree = "<group>"; };
 		2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,7 +160,6 @@
 				2CF34BAA1EFBB4C100BF531B /* Configuration */,
 				2CF34B9E1EFBB3C000BF531B /* Extensions */,
 				2CF34B951EFBB33000BF531B /* Protocols */,
-				2CF34B921EFBB30200BF531B /* Views */,
 			);
 			path = Atlas;
 			sourceTree = "<group>";
@@ -190,20 +171,11 @@
 				2CF34BC91EFBBD5600BF531B /* TestData */,
 				2CF34BC61EFBBBD700BF531B /* Mocks */,
 				2CF34BC31EFBBA3F00BF531B /* TestUtilities */,
-				2CF34BC01EFBB9E300BF531B /* Views */,
 				2CF34BB81EFBB88B00BF531B /* Extensions */,
 				2CF34BB91EFBB88B00BF531B /* Matcher */,
 				2CEFC1CC1EFBAE8F0013264C /* Info.plist */,
 			);
 			path = AtlasTests;
-			sourceTree = "<group>";
-		};
-		2CF34B921EFBB30200BF531B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2CF34B931EFBB30200BF531B /* MVVMCContainerView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		2CF34B951EFBB33000BF531B /* Protocols */ = {
@@ -213,12 +185,8 @@
 				2CCB99E81F04EFBF00C95527 /* MVVMCFactoryProtocol.swift */,
 				2CCB99EA1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift */,
 				2CCB99EC1F04F00600C95527 /* MVVMCChildCoordinatorDelegate.swift */,
-				2CF34BA81EFBB47D00BF531B /* MVVMCViewModelDelegate.swift */,
-				2CF34BA61EFBB46800BF531B /* MVVMCViewModelProtocol.swift */,
-				2CF34B961EFBB36F00BF531B /* MVVMCModelObserver.swift */,
+				2CF34BA81EFBB47D00BF531B /* MVVMCViewDelegate.swift */,
 				2CF34B971EFBB36F00BF531B /* MVVMCModelProtocol.swift */,
-				2CF34B981EFBB36F00BF531B /* MVVMCContainerViewModelProtocol.swift */,
-				2CF34B991EFBB36F00BF531B /* MVVMCContentViewDelegate.swift */,
 				2C374C051F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift */,
 			);
 			path = Protocols;
@@ -280,14 +248,6 @@
 			path = Matcher;
 			sourceTree = "<group>";
 		};
-		2CF34BC01EFBB9E300BF531B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2CF34BC11EFBB9F000BF531B /* MVVMCContainerTests.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		2CF34BC31EFBBA3F00BF531B /* TestUtilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				2C374C011F175CD0002F4CD1 /* MVVMCCoordinatorMock.swift */,
-				2CF34BCE1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift */,
 				2CF34BC71EFBBBF300BF531B /* ModelMock.swift */,
 			);
 			path = Mocks;
@@ -310,8 +269,6 @@
 		2CF34BC91EFBBD5600BF531B /* TestData */ = {
 			isa = PBXGroup;
 			children = (
-				2CF34BCA1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift */,
-				2CF34BCC1EFBC01E00BF531B /* TestViews.swift */,
 				2CCB99F51F04F1B500C95527 /* TestFactories.swift */,
 				2CCB99F71F04F8C900C95527 /* TestTargets.swift */,
 				2C374C091F176554002F4CD1 /* TestImages.xcassets */,
@@ -460,19 +417,14 @@
 				2CCB99F11F04F04300C95527 /* MVVMCTransitionType.swift in Sources */,
 				2CF34BAD1EFBB4CF00BF531B /* MVVMCNavigationRequest.swift in Sources */,
 				2CF34BAE1EFBB4CF00BF531B /* MVVMCNavigationTarget.swift in Sources */,
-				2CF34B9D1EFBB36F00BF531B /* MVVMCContentViewDelegate.swift in Sources */,
-				2CF34B941EFBB30200BF531B /* MVVMCContainerView.swift in Sources */,
 				2CCB99EF1F04F03000C95527 /* MVVMCStartable.swift in Sources */,
 				2CF34BA51EFBB43700BF531B /* Pinable.swift in Sources */,
-				2CF34B9A1EFBB36F00BF531B /* MVVMCModelObserver.swift in Sources */,
-				2CF34BA91EFBB47D00BF531B /* MVVMCViewModelDelegate.swift in Sources */,
+				2CF34BA91EFBB47D00BF531B /* MVVMCViewDelegate.swift in Sources */,
 				2CCB99EB1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift in Sources */,
 				2CCB99E91F04EFBF00C95527 /* MVVMCFactoryProtocol.swift in Sources */,
 				2CF34BA11EFBB3D500BF531B /* UIView+ContainerView.swift in Sources */,
-				2CF34BA71EFBB46800BF531B /* MVVMCViewModelProtocol.swift in Sources */,
 				2CCB99E71F04EFA800C95527 /* MVVMCCoordinator.swift in Sources */,
 				2C374C061F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift in Sources */,
-				2CF34B9C1EFBB36F00BF531B /* MVVMCContainerViewModelProtocol.swift in Sources */,
 				2C374C041F176212002F4CD1 /* MVVMCAppCoordinator.swift in Sources */,
 				2CF34B9B1EFBB36F00BF531B /* MVVMCModelProtocol.swift in Sources */,
 			);
@@ -483,14 +435,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C374C021F175CD0002F4CD1 /* MVVMCCoordinatorMock.swift in Sources */,
-				2CF34BCB1EFBBD7200BF531B /* MVVMCTestContainerViewModel.swift in Sources */,
-				2CF34BCF1EFBC20700BF531B /* MVVMCContentViewDelegateMock.swift in Sources */,
 				2C374C0D1F17676D002F4CD1 /* ImageMatcherTests.swift in Sources */,
 				2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */,
 				2C374C0E1F17676D002F4CD1 /* ImageMatcher.swift in Sources */,
 				2CF34BC81EFBBBF300BF531B /* ModelMock.swift in Sources */,
 				2C374C081F176262002F4CD1 /* MVVMCAppCoordinatorTests.swift in Sources */,
-				2CF34BCD1EFBC01E00BF531B /* TestViews.swift in Sources */,
 				2CF34BBB1EFBB8EE00BF531B /* ContraintMatcher.swift in Sources */,
 				2CF34BC51EFBBA4700BF531B /* UIViewController+PreloadView.swift in Sources */,
 				2CCB99F81F04F8C900C95527 /* TestTargets.swift in Sources */,
@@ -499,7 +448,6 @@
 				2CF34BBF1EFBB92300BF531B /* UIViewExtensionTests.swift in Sources */,
 				2CCB99F61F04F1B500C95527 /* TestFactories.swift in Sources */,
 				2CF34BBD1EFBB8F700BF531B /* ConstraintMatcherTests.swift in Sources */,
-				2CF34BC21EFBB9F000BF531B /* MVVMCContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -62,12 +62,8 @@ class MVVMCAppCoordinatorTests: QuickSpec {
                             expect(rootViewController?.tabBar.items?[0].image).to(equalImage(expectedValue: UIImage.loadTestImage(named: "CircleUnselected")))
                         }
                         
-                        it("starts a PushCoordinator") {
-                            expect(topMostViewController).to(beAnInstanceOf(MVVMCContainerView.self))
-                        }
-                        
                         it("starts the Feature1Coordinator") {
-                            expect((topMostViewController as! MVVMCContainerView).view.subviews[0]).to(beAnInstanceOf(GreenTestView.self))
+                            expect(topMostViewController).to(beAnInstanceOf(GreenTestViewController.self))
                         }
                     }
                     
@@ -103,7 +99,7 @@ class MVVMCAppCoordinatorTests: QuickSpec {
                         }
                         
                         it("starts a PushCoordinator") {
-                            expect((rootViewController?.selectedViewController as! UINavigationController).topViewController).to(beAnInstanceOf(MVVMCContainerView.self))
+                            expect((rootViewController?.selectedViewController as! UINavigationController).topViewController).to(beAnInstanceOf(BlueTestViewController.self))
                         }
                         
                         it("has no title") {
@@ -120,7 +116,7 @@ class MVVMCAppCoordinatorTests: QuickSpec {
                                 sut?.tabBar.delegate?.tabBarController!((sut?.tabBar)!, didSelect: (sut?.navigationControllers[0])!)
                                 sut?.tabBar.selectedIndex = 0
                                 let viewController = sut?.navigationControllers[0].topViewController
-                                expect(viewController).to(beAnInstanceOf(MVVMCContainerView.self))
+                                expect(viewController).to(beAnInstanceOf(GreenTestViewController.self))
                             }
 
                             it("destroys the other view") {
