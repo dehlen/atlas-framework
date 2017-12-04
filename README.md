@@ -9,7 +9,7 @@ A MVVM-C architecture framework for iOS.
 
 Based on the concepts introduced in the [MVVM-C talk by Steve Scott](https://www.youtube.com/watch?v=9VojuJpUuE8).
 
-TODO:  Architecture pattern diagram
+![Architecture used within a Todo app](Resources/architecture.png)
 
 ## Getting Started
 
