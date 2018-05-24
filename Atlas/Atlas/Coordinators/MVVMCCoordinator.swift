@@ -26,10 +26,10 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
 extension MVVMCCoordinator {
     func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType) {
         switch transitionType {
-            case .modal:
-                navigationController.present(view, animated: true)
-            case .push:
-                navigationController.pushViewController(view, animated: false)
+            case .modal(let animated):
+                navigationController.present(view, animated: animated)
+            case .push(let animated):
+                navigationController.pushViewController(view, animated: animated)
         }
     }
 }

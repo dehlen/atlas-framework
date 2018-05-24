@@ -1,7 +1,7 @@
 import Atlas
 
 class StateFactory: MVVMCFactoryProtocol {
-    var transitionType = MVVMCTransitionType.push
+    var transitionType = MVVMCTransitionType.push(animated: false)
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return GreenFactory()
@@ -13,7 +13,7 @@ class StateFactory: MVVMCFactoryProtocol {
 }
 
 class GreenFactory: MVVMCFactoryProtocol {
-    var transitionType = MVVMCTransitionType.push
+    var transitionType = MVVMCTransitionType.push(animated: false)
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return BlueFactory()
@@ -27,7 +27,7 @@ class GreenFactory: MVVMCFactoryProtocol {
 }
 
 class BlueFactory: MVVMCFactoryProtocol {
-    var transitionType = MVVMCTransitionType.modal
+    var transitionType = MVVMCTransitionType.modal(animated: false)
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
@@ -42,7 +42,7 @@ class Feature1Factory: MVVMCTabBarFactoryProtocol {
     var selectedTabBarIconImage = UIImage.loadTestImage(named: "CircleSelected")
     var unselectedTabBarIconImage = UIImage.loadTestImage(named: "CircleUnselected")
     
-    var transitionType = MVVMCTransitionType.push
+    var transitionType = MVVMCTransitionType.push(animated: false)
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
@@ -59,7 +59,7 @@ class Feature2Factory: MVVMCTabBarFactoryProtocol {
     var selectedTabBarIconImage = UIImage.loadTestImage(named: "DiamondSelected")
     var unselectedTabBarIconImage = UIImage.loadTestImage(named: "DiamondUnselected")
     
-    var transitionType = MVVMCTransitionType.push
+    var transitionType = MVVMCTransitionType.push(animated: false)
     
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
