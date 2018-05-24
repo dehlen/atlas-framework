@@ -334,7 +334,7 @@
 		2CEFC1B31EFBAE8F0013264C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "dm-drogerie markt GmbH + Co. KG";
 				TargetAttributes = {
@@ -358,6 +358,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2CEFC1B21EFBAE8F0013264C;
 			productRefGroup = 2CEFC1BD1EFBAE8F0013264C /* Products */;
