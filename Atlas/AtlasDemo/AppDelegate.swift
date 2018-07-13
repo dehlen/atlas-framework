@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         let model = EmptyModel()
-        appCoordinator = MVVMCAppCoordinator(model: model, window: window!, factories: [BlueColorFactory()])
+        appCoordinator = MVVMCAppCoordinator(model: model, window: window!, factories: [BlueColorFactory(), GreenColorFactory()])
         appCoordinator.start()
 
         return true

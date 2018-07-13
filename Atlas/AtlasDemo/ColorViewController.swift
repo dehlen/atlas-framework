@@ -17,7 +17,7 @@ class ColorViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        view.backgroundColor = viewModel?.backgroundColor
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = viewModel?.backgroundColor
+//        view.backgroundColor = UIColor.red
     }
 }

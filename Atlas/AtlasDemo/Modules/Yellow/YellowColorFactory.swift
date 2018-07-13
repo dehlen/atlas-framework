@@ -10,7 +10,7 @@ class YellowColorFactory: MVVMCFactoryProtocol {
     public func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
         let viewModel = YellowColorViewModel()
         viewModel.delegate = delegate
-        let viewController = ColorViewController()
+        let viewController = YellowColorViewController()
         viewController.viewModel = viewModel
         
         return viewController
