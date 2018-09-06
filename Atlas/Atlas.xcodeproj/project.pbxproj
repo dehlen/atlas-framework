@@ -15,6 +15,7 @@
 		2C374C0D1F17676D002F4CD1 /* ImageMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C374C0B1F17676D002F4CD1 /* ImageMatcherTests.swift */; };
 		2C374C0E1F17676D002F4CD1 /* ImageMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C374C0C1F17676D002F4CD1 /* ImageMatcher.swift */; };
 		2C374C101F176890002F4CD1 /* UIImage+loadTestImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C374C0F1F176890002F4CD1 /* UIImage+loadTestImage.swift */; };
+		2C7383F32140E1B400FBCFAE /* MVVMCModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7383F22140E1B400FBCFAE /* MVVMCModule.swift */; };
 		2CAD4BD020F88428003CBE9C /* YellowColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BCF20F88428003CBE9C /* YellowColorViewController.swift */; };
 		2CAD4BD520F8843D003CBE9C /* GreenColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BD220F8843C003CBE9C /* GreenColorFactory.swift */; };
 		2CAD4BD620F8843D003CBE9C /* GreenColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BD320F8843C003CBE9C /* GreenColorViewController.swift */; };
@@ -102,6 +103,7 @@
 		2C374C0B1F17676D002F4CD1 /* ImageMatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMatcherTests.swift; sourceTree = "<group>"; };
 		2C374C0C1F17676D002F4CD1 /* ImageMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMatcher.swift; sourceTree = "<group>"; };
 		2C374C0F1F176890002F4CD1 /* UIImage+loadTestImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+loadTestImage.swift"; sourceTree = "<group>"; };
+		2C7383F22140E1B400FBCFAE /* MVVMCModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMCModule.swift; sourceTree = "<group>"; };
 		2CAD4BCF20F88428003CBE9C /* YellowColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowColorViewController.swift; sourceTree = "<group>"; };
 		2CAD4BD220F8843C003CBE9C /* GreenColorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenColorFactory.swift; sourceTree = "<group>"; };
 		2CAD4BD320F8843C003CBE9C /* GreenColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenColorViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				2CCB99E61F04EFA800C95527 /* MVVMCCoordinator.swift */,
 				2C374C031F176212002F4CD1 /* MVVMCAppCoordinator.swift */,
+				2C7383F22140E1B400FBCFAE /* MVVMCModule.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				2CCB99EB1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift in Sources */,
 				2CCB99E91F04EFBF00C95527 /* MVVMCFactoryProtocol.swift in Sources */,
 				2CF34BA11EFBB3D500BF531B /* UIView+ContainerView.swift in Sources */,
+				2C7383F32140E1B400FBCFAE /* MVVMCModule.swift in Sources */,
 				2CCB99E71F04EFA800C95527 /* MVVMCCoordinator.swift in Sources */,
 				2C374C061F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift in Sources */,
 				2C374C041F176212002F4CD1 /* MVVMCAppCoordinator.swift in Sources */,

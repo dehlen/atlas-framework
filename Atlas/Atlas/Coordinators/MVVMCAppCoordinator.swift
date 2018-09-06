@@ -3,39 +3,47 @@ import UIKit
 public class MVVMCAppCoordinator: NSObject {
     let model: MVVMCModelProtocol
     let window: UIWindow
-    let factories: [MVVMCTabBarFactoryProtocol]
     let tabBar: UITabBarController
-    var navigationControllers: [UINavigationController] = []
-    var coordinatorStack: [UINavigationController: MVVMCCoordinatorProtocol] = [:]
+    var modules: [MVVMCModule]
     
     required public init(model: MVVMCModelProtocol, window: UIWindow, factories: [MVVMCTabBarFactoryProtocol]) {
         self.model = model
         self.window = window
-        self.factories = factories
+        self.modules = []
         
         tabBar = UITabBarController()
+        tabBar.viewControllers = []
         
         super.init()
         
         tabBar.delegate = self
-        setupTabBar()
-        
+        setupModules(for: factories)
+
         window.rootViewController = tabBar
     }
     
     public func start() {
-        startTab(viewController: navigationControllers[0])
-    }
-    
-    func setupTabBar() {
-        for factory in factories {
-            let navController = setupTabBarItem(image: factory.unselectedTabBarIconImage, selectedImage: factory.selectedTabBarIconImage)
-            navigationControllers.append(navController)
+        // TODO: Do not start all modules directly at the beginning
+        for module in modules {
+            module.coordinator.start()
         }
-        
-        tabBar.viewControllers = navigationControllers
     }
-    
+
+    func setupModules(for factories: [MVVMCTabBarFactoryProtocol]) {
+        var rootViewControllers: [UINavigationController] = []
+
+        for factory in factories {
+            let navigationController = setupTabBarItem(image: factory.unselectedTabBarIconImage, selectedImage: factory.selectedTabBarIconImage)
+            let coordinator = MVVMCCoordinator(model: model, navigationController: navigationController, factory: factory)
+            let module = MVVMCModule(factory: factory, navigationController: navigationController, coordinator: coordinator)
+
+            rootViewControllers.append(navigationController)
+            modules.append(module)
+        }
+
+        tabBar.setViewControllers(rootViewControllers, animated: false)
+    }
+
     func setupTabBarItem(image: UIImage?, selectedImage: UIImage?) -> UINavigationController {
         let navController = UINavigationController()
         navController.tabBarItem = UITabBarItem(title: nil, image: image, selectedImage: selectedImage)
@@ -43,38 +51,15 @@ public class MVVMCAppCoordinator: NSObject {
         
         return navController
     }
-    
-    func startTab(viewController: UINavigationController) {
-        var controllers: [UINavigationController] = []
-        for (index, controller) in navigationControllers.enumerated() {
-            if controller === viewController {
-                controller.viewControllers = []
-                controllers.append(controller)
-                let factory = factories[index]
-                let coordinator = MVVMCCoordinator(model: model, navigationController: viewController, factory: factory)
-                coordinatorStack[controller] = coordinator
-                coordinator.start()
-            }
-            else {
-                coordinatorStack[controller] = nil
-                let factory = factories[index]
-                let navController = setupTabBarItem(image: factory.unselectedTabBarIconImage, selectedImage: factory.selectedTabBarIconImage)
-                controllers.append(navController)
-            }
-        }
-        
-        navigationControllers = controllers
-        tabBar.viewControllers = navigationControllers
-    }
 }
 
 // MARK: - UITabBarControllerDelegate
 extension MVVMCAppCoordinator: UITabBarControllerDelegate {
     public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        guard let viewController = viewController as? UINavigationController else {
-            return
-        }
+//        guard let viewController = viewController as? UINavigationController else {
+//            return
+//        }
         
-        startTab(viewController: viewController)
+//        startTab(viewController: viewController)
     }
 }
