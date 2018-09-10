@@ -35,7 +35,7 @@ or use the framework via CocoaPods:
   - ViewModel of type MVVMCViewModelProtocol
   - If view wants lifecycle events, it has to be of type MVVMCContentViewDelegate
   - Factory for tab root views: MVVMCTabBarFactoryProtocol
-  - Factory for navigatin targets: MVVMCFactoryProtocol
+  - Factory for navigation targets: MVVMCFactoryProtocol
   - Navigation targets of type MVVMCNavigationTarget
   - Setup app with AppCoordinator
 
