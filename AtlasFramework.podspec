@@ -8,9 +8,10 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://stash.dm-drogeriemarkt.com/projects/OSI/repos/atlas/browse"
   s.license      = { :type => "MIT", :file => "LICENSE.txt" }
-  s.author             = { "Engel, Stefan" => "stefan.engel@dm.de",
-  												 "Olbrich, Jan" => "jan.olbrich@dm.de" }
-
+  s.author             = { 
+  	"Engel, Stefan" => "stefan.engel@dm.de",
+  	"Olbrich, Jan" => "jan.olbrich@dm.de" 
+  }
   s.source       = { :git => "https://stash.dm-drogeriemarkt.com/scm/osi/atlas.git", :tag => "#{s.version}" }
   s.source_files  = "Atlas/Atlas/**/*.{h,m,swift}"
   s.public_header_files = "Atlas/Atlas/**/*.h"
