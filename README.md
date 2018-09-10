@@ -9,7 +9,7 @@ Atlas is a framework that helps you structure your iOS app using the MVVM-C arch
 
 The Atlas framework is based on the concepts introduced in the [MVVM-C talk by Steve Scott](https://www.youtube.com/watch?v=9VojuJpUuE8).
 
-![Architecture used within a Todo app](Resources/architecture.png)
+![Architecture used within a Todo app](Resources/Architecture.png)
 
 ## Getting Started
 
