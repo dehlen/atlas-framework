@@ -19,6 +19,9 @@ Add the following to your Cartfile:
 
 ```github "dm-drogeriemarkt/Atlas" ~> 1.0```
 
+or use the framework via CocoaPods:
+``` pod 'AtlasFramework', '1.0.0' ```
+
 ### Configuration
 
 - For every root view (tab in the tab bar) of your app, create a factory that implements MVVMCTabBarFactoryProtocol
