@@ -9,7 +9,7 @@ Atlas is a framework that helps you structure your iOS app using the MVVM-C arch
 
 The Atlas framework is based on the concepts introduced in the [MVVM-C talk by Steve Scott](https://www.youtube.com/watch?v=9VojuJpUuE8).
 
-![Architecture used within a Todo app](Resources/architecture.png)
+![Architecture used within a Todo app](Resources/Architecture.png)
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ or use the framework via CocoaPods:
   - ViewModel of type MVVMCViewModelProtocol
   - If view wants lifecycle events, it has to be of type MVVMCContentViewDelegate
   - Factory for tab root views: MVVMCTabBarFactoryProtocol
-  - Factory for navigatin targets: MVVMCFactoryProtocol
+  - Factory for navigation targets: MVVMCFactoryProtocol
   - Navigation targets of type MVVMCNavigationTarget
   - Setup app with AppCoordinator
 
