@@ -1,10 +1,12 @@
 public enum MVVMCNavigationRequest {
     case dismiss
     case request(target: MVVMCNavigationTarget)
-    
+    case overlay
+
     var navigationTarget: MVVMCNavigationTarget? {
         switch self {
             case .dismiss: return nil
+            case .overlay: return nil
             case .request(let value): return value
         }
     }
