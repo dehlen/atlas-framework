@@ -6,7 +6,6 @@ class MVVMCCoordinator {
     var navigationController: UINavigationController
     var targetCoordinator: MVVMCCoordinatorProtocol?
     weak var coordinatorDelegate: MVVMCChildCoordinatorDelegate?
-    var overlayViewContainer: UIViewController?
 
     required init(model: MVVMCModelProtocol, navigationController: UINavigationController, factory: MVVMCFactoryProtocol) {
         self.model = model
@@ -31,45 +30,7 @@ extension MVVMCCoordinator {
                 navigationController.present(view, animated: animated)
             case .push(let animated):
                 navigationController.pushViewController(view, animated: animated)
-            case .overlay: ()
         }
-    }
-}
-
-// MARK: - Handling of overlays
-extension MVVMCCoordinator {
-    fileprivate func presentAsOverlay(_ view: UIViewController) {
-        if overlayViewContainer != nil { return }
-        guard let topViewController = navigationController.topViewController else { return }
-        view.view.isUserInteractionEnabled = false
-        topViewController.addChildViewController(view)
-        topViewController.view.addSubview(view.view)
-        view.view.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            view.view.topAnchor.constraint(equalTo: topViewController.view.bottomAnchor),
-            view.view.leftAnchor.constraint(equalTo: topViewController.view.leftAnchor),
-            view.view.widthAnchor.constraint(equalTo: topViewController.view.widthAnchor)
-        ])
-
-        view.didMove(toParentViewController: navigationController)
-        overlayViewContainer = view
-    }
-
-    fileprivate func removeOverlay() {
-        guard let overlayViewContainer = overlayViewContainer else {
-            return
-        }
-
-        overlayViewContainer.willMove(toParentViewController: nil)
-        overlayViewContainer.view.removeFromSuperview()
-        overlayViewContainer.removeFromParentViewController()
-
-        self.overlayViewContainer = nil
-    }
-
-    func requestsOverlayDismissal() {
-        removeOverlay()
     }
 }
 
@@ -79,7 +40,6 @@ extension MVVMCCoordinator {
         switch request {
         case .dismiss: coordinatorDelegate?.childCoordinatorRequestsDismissal(self, transitionType: factory.transitionType, animated: true)
         case .request(let target): navigateTo(target)
-        case .overlay: presentAsOverlay(viewController)
         }
     }
     
@@ -100,7 +60,6 @@ extension MVVMCCoordinator {
         switch transitionType {
             case .push: navigationController.popViewController(animated: animated)
             case .modal: navigationController.dismiss(animated: animated, completion: nil)
-            case .overlay: ()
         }
         targetCoordinator = nil
     }
