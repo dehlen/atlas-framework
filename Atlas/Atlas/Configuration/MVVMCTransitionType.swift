@@ -8,7 +8,7 @@ extension MVVMCTransitionType: Equatable {
     public static func == (lhs: MVVMCTransitionType, rhs: MVVMCTransitionType) -> Bool {
         switch (lhs, rhs) {
         case (.modal(_), .modal(_)): return true
-        case let (.push(_), .push(_)): return true
+        case (.push(_), .push(_)): return true
         default: return false
         }
     }
