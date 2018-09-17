@@ -28,13 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-class DelegateMock: MVVMCViewDelegate {
-    func view(_ viewController: UIViewController, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
-        print("============ Navigation request")
-    }
-}
-
 extension AppDelegate: MVVMCViewDelegate {
-    public func view(_ viewController: UIViewController, requestsNavigation request: Atlas.MVVMCNavigationRequest, withData data: [String : Any]?) {
+    func request(navigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
     }
 }
