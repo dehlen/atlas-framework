@@ -39,6 +39,7 @@ class BlueFactory: MVVMCFactoryProtocol {
 }
 
 class Feature1Factory: MVVMCTabBarFactoryProtocol {
+    var prefersLargeTitles = true
     var selectedTabBarIconImage = UIImage.loadTestImage(named: "CircleSelected")
     var unselectedTabBarIconImage = UIImage.loadTestImage(named: "CircleUnselected")
     
@@ -56,6 +57,7 @@ class Feature1Factory: MVVMCTabBarFactoryProtocol {
 }
 
 class Feature2Factory: MVVMCTabBarFactoryProtocol {
+    var prefersLargeTitles = true
     var selectedTabBarIconImage = UIImage.loadTestImage(named: "DiamondSelected")
     var unselectedTabBarIconImage = UIImage.loadTestImage(named: "DiamondUnselected")
     

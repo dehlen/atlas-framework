@@ -9,6 +9,8 @@
 import Atlas
 
 class GreenColorFactory: MVVMCTabBarFactoryProtocol {
+    var prefersLargeTitles = true
+
     public var selectedTabBarIconImage = UIImage(named: "Heart")
     public var unselectedTabBarIconImage = UIImage(named: "Heart")
 

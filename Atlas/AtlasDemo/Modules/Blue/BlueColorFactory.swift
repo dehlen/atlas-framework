@@ -1,6 +1,8 @@
 import Atlas
 
 class BlueColorFactory: MVVMCTabBarFactoryProtocol {
+    var prefersLargeTitles = true
+
     public var selectedTabBarIconImage = UIImage(named: "Home")
     public var unselectedTabBarIconImage = UIImage(named: "Home")
     
