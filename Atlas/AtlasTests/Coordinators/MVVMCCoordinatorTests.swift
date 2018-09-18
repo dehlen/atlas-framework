@@ -45,7 +45,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                         it("request its coordinatorDelegate to dismiss") {
                             let mock = MVVMCCoordinatorMock()
                             sut!.coordinatorDelegate = mock
-                            sut!.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.dismiss, withData: nil)
+                            sut!.request(navigation: MVVMCNavigationRequest.dismiss, withData: nil)
                             expect(mock.didCallCoordinatorRequestsDismissal).to(beTrue())
                         }
                     }
@@ -65,7 +65,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                             
                             sut.start()
                             
-                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
+                            sut.request(navigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
                             
                             expect(navigation.topViewController).to(beAnInstanceOf(GreenTestViewController.self))
                         }
@@ -85,7 +85,7 @@ class MVVMCCoordinatorTests: QuickSpec {
 
                             sut.start()
                             
-                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.blue), withData: nil)
+                            sut.request(navigation: MVVMCNavigationRequest.request(target: TestTargets.blue), withData: nil)
                             
                             expect(navigation.presentedViewController).to(beAnInstanceOf(BlueTestViewController.self))
                         }
@@ -100,7 +100,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                             
                             sut.start()
                             
-                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
+                            sut.request(navigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
                             
                             expect(sut.targetCoordinator?.coordinatorDelegate).to(be(sut))
                         }
@@ -115,7 +115,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                             
                             sut.start()
                             
-                            sut.view(UIViewController(), requestsNavigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
+                            sut.request(navigation: MVVMCNavigationRequest.request(target: TestTargets.green), withData: nil)
                             
                             sut.childCoordinatorRequestsDismissal(sut.targetCoordinator!, transitionType: factory.transitionType, animated: false)
                             

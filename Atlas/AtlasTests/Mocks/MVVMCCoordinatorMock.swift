@@ -13,7 +13,7 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     func startWithViewController() {
     }
     
-    func view(_ viewController: UIViewController, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
+    func request(navigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
         didCallViewModelRequestsWithData = true
         if request == .dismiss {
             didRequestDismissal = true

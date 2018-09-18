@@ -36,10 +36,10 @@ extension MVVMCCoordinator {
 
 // MARK: - MVVMCViewModelDelegate
 extension MVVMCCoordinator {
-    func view(_ viewController: UIViewController, requestsNavigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
+    func request(navigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
         switch request {
-        case .dismiss: coordinatorDelegate?.childCoordinatorRequestsDismissal(self, transitionType: factory.transitionType, animated: true)
-        case .request(let target): navigateTo(target)
+            case .dismiss: coordinatorDelegate?.childCoordinatorRequestsDismissal(self, transitionType: factory.transitionType, animated: true)
+            case .request(let target): navigateTo(target)
         }
     }
     

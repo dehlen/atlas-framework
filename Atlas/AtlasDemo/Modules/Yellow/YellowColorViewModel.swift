@@ -5,6 +5,6 @@ class YellowColorViewModel: ColorViewModelProtocol {
     var delegate: MVVMCViewDelegate?
     
     func navigate(viewController: UIViewController) {
-        delegate?.view(viewController, requestsNavigation: MVVMCNavigationRequest.request(target: NavigationTargets.yellow), withData: nil)
+        delegate?.request(navigation: MVVMCNavigationRequest.request(target: NavigationTargets.yellow), withData: nil)
     }
 }
