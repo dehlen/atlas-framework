@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView: Pinable {
-    func pinEdgesTo(superview: UIView) {
+    public func pinEdgesTo(superview: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
         superview.addSubview(self)
         

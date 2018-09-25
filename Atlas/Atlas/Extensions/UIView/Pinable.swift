@@ -1,5 +1,5 @@
 import UIKit
 
-protocol Pinable {
+public protocol Pinable {
     func pinEdgesTo(superview: UIView)
 }
