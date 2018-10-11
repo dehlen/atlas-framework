@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://stash.dm-drogeriemarkt.com/scm/osi/atlas.git", :tag => "#{s.version}" }
   s.source_files  = "Atlas/Atlas/**/*.{h,m,swift}"
   s.public_header_files = "Atlas/Atlas/**/*.h"
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
   s.platform     = :ios, '9.0'
 end
