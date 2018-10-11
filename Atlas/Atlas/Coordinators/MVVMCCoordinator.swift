@@ -25,6 +25,9 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
 // MARK: - transitions
 extension MVVMCCoordinator {
     func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType) {
+        if !navigationController.navigationBar.isTranslucent {
+            view.extendedLayoutIncludesOpaqueBars = true
+        }
         switch transitionType {
             case .modal(let animated):
                 navigationController.present(view, animated: animated)
