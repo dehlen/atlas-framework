@@ -8,15 +8,43 @@ class MVVMCCoordinatorTests: QuickSpec {
         describe("The MVVMCCoordinator") {
             context("after calling start()") {
                 context("being in default state") {
-                    it("displays the red test view") {
-                        let model = ModelMock()
+                    var model: ModelMock?
+                    var sut: MVVMCCoordinator?
+                    var navigation: UINavigationController?
+
+                    beforeEach {
                         let factory = StateFactory()
-                        let navigation = UINavigationController()
-                        let sut = MVVMCCoordinator(model: model, navigationController: navigation, factory: factory)
+                        navigation = UINavigationController()
+                        model = ModelMock()
+                        sut = MVVMCCoordinator(model: model!, navigationController: navigation!, factory: factory)
+                    }
+
+                    afterEach {
+                        sut = nil
+                        model = nil
+                        navigation = nil
+                    }
+
+                    it("displays the red test view") {
+                        sut!.start()
                         
-                        sut.start()
-                        
-                        expect(navigation.topViewController).to(beAnInstanceOf(RedTestViewController.self))
+                        expect(navigation!.topViewController).to(beAnInstanceOf(RedTestViewController.self))
+                    }
+
+                    context("when the logged in state changes") {
+                        beforeEach {
+                            model!.isLoggedIn = true
+                        }
+
+                        context("calling reload()") {
+                            beforeEach {
+                                sut!.reload()
+                            }
+
+                            it("shows the new view") {
+                                expect(navigation!.topViewController).to(beAnInstanceOf(BlueTestViewController.self))
+                            }
+                        }
                     }
                 }
             }
