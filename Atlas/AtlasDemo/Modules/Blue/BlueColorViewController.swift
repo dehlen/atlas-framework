@@ -1,11 +1,3 @@
-//
-//  BlueColorViewController.swift
-//  AtlasDemo
-//
-//  Created by Engel, Stefan on 28.06.18.
-//  Copyright © 2018 dm-drogerie markt GmbH + Co. KG. All rights reserved.
-//
-
 import UIKit
 
 class BlueColorViewController: UIViewController {

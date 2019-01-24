@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C208D7E21F9B99700F086CE /* RedColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C208D7D21F9B99700F086CE /* RedColorViewModel.swift */; };
+		2C208D8021F9B9A700F086CE /* RedColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C208D7F21F9B9A700F086CE /* RedColorViewController.swift */; };
+		2C208D8221F9C20E00F086CE /* YellowViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C208D8121F9C20E00F086CE /* YellowViewModelProtocol.swift */; };
 		2C374C021F175CD0002F4CD1 /* MVVMCCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C374C011F175CD0002F4CD1 /* MVVMCCoordinatorMock.swift */; };
 		2C374C041F176212002F4CD1 /* MVVMCAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C374C031F176212002F4CD1 /* MVVMCAppCoordinator.swift */; };
 		2C374C061F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C374C051F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift */; };
@@ -43,7 +46,7 @@
 		2CCCBC3E20E168B5003A4BD4 /* BlueColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCBC3820E168B5003A4BD4 /* BlueColorFactory.swift */; };
 		2CCCBC4020E168B5003A4BD4 /* YellowColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCBC3B20E168B5003A4BD4 /* YellowColorViewModel.swift */; };
 		2CCCBC4120E168B5003A4BD4 /* YellowColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCBC3C20E168B5003A4BD4 /* YellowColorFactory.swift */; };
-		2CCCBC4820E16905003A4BD4 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCBC4320E16905003A4BD4 /* EmptyModel.swift */; };
+		2CCCBC4820E16905003A4BD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCBC4320E16905003A4BD4 /* User.swift */; };
 		2CCCBC4B20E16905003A4BD4 /* NavigationTargets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCBC4620E16905003A4BD4 /* NavigationTargets.swift */; };
 		2CEFC1C61EFBAE8F0013264C /* Atlas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFC1BC1EFBAE8F0013264C /* Atlas.framework */; };
 		2CEFC1CD1EFBAE8F0013264C /* Atlas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEFC1BF1EFBAE8F0013264C /* Atlas.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +99,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C208D7D21F9B99700F086CE /* RedColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedColorViewModel.swift; sourceTree = "<group>"; };
+		2C208D7F21F9B9A700F086CE /* RedColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedColorViewController.swift; sourceTree = "<group>"; };
+		2C208D8121F9C20E00F086CE /* YellowViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewModelProtocol.swift; sourceTree = "<group>"; };
 		2C374C011F175CD0002F4CD1 /* MVVMCCoordinatorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCCoordinatorMock.swift; sourceTree = "<group>"; };
 		2C374C031F176212002F4CD1 /* MVVMCAppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCAppCoordinator.swift; sourceTree = "<group>"; };
 		2C374C051F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCTabBarFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -132,7 +138,7 @@
 		2CCCBC3820E168B5003A4BD4 /* BlueColorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueColorFactory.swift; sourceTree = "<group>"; };
 		2CCCBC3B20E168B5003A4BD4 /* YellowColorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowColorViewModel.swift; sourceTree = "<group>"; };
 		2CCCBC3C20E168B5003A4BD4 /* YellowColorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowColorFactory.swift; sourceTree = "<group>"; };
-		2CCCBC4320E16905003A4BD4 /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		2CCCBC4320E16905003A4BD4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2CCCBC4620E16905003A4BD4 /* NavigationTargets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTargets.swift; sourceTree = "<group>"; };
 		2CEFC1BC1EFBAE8F0013264C /* Atlas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atlas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEFC1BF1EFBAE8F0013264C /* Atlas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atlas.h; sourceTree = "<group>"; };
@@ -185,6 +191,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C208D7A21F9B97600F086CE /* Red */ = {
+			isa = PBXGroup;
+			children = (
+				2C208D7D21F9B99700F086CE /* RedColorViewModel.swift */,
+				2C208D7F21F9B9A700F086CE /* RedColorViewController.swift */,
+			);
+			path = Red;
+			sourceTree = "<group>";
+		};
 		2CAD4BD120F8843C003CBE9C /* Green */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */,
-				2CCCBC4320E16905003A4BD4 /* EmptyModel.swift */,
+				2CCCBC4320E16905003A4BD4 /* User.swift */,
 				2CCCBC4620E16905003A4BD4 /* NavigationTargets.swift */,
 				2CCCBC3520E168B5003A4BD4 /* Modules */,
 				2CCCBC1E20E167E6003A4BD4 /* AppDelegate.swift */,
@@ -234,6 +249,7 @@
 		2CCCBC3520E168B5003A4BD4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C208D7A21F9B97600F086CE /* Red */,
 				2CAD4BD120F8843C003CBE9C /* Green */,
 				2CCCBC3620E168B5003A4BD4 /* Blue */,
 				2CCCBC3920E168B5003A4BD4 /* Yellow */,
@@ -257,6 +273,7 @@
 				2CAD4BCF20F88428003CBE9C /* YellowColorViewController.swift */,
 				2CCCBC3B20E168B5003A4BD4 /* YellowColorViewModel.swift */,
 				2CCCBC3C20E168B5003A4BD4 /* YellowColorFactory.swift */,
+				2C208D8121F9C20E00F086CE /* YellowViewModelProtocol.swift */,
 			);
 			path = Yellow;
 			sourceTree = "<group>";
@@ -581,14 +598,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C208D8021F9B9A700F086CE /* RedColorViewController.swift in Sources */,
 				2CCCBC4B20E16905003A4BD4 /* NavigationTargets.swift in Sources */,
 				2CCCBC3E20E168B5003A4BD4 /* BlueColorFactory.swift in Sources */,
 				2CCCBC2120E167E6003A4BD4 /* ViewController.swift in Sources */,
-				2CCCBC4820E16905003A4BD4 /* EmptyModel.swift in Sources */,
+				2CCCBC4820E16905003A4BD4 /* User.swift in Sources */,
 				2CAD4BD620F8843D003CBE9C /* GreenColorViewController.swift in Sources */,
 				2CCCBC4020E168B5003A4BD4 /* YellowColorViewModel.swift in Sources */,
+				2C208D8221F9C20E00F086CE /* YellowViewModelProtocol.swift in Sources */,
 				2CAD4BD720F8843D003CBE9C /* GreenColorViewModel.swift in Sources */,
 				2CAD4BD520F8843D003CBE9C /* GreenColorFactory.swift in Sources */,
+				2C208D7E21F9B99700F086CE /* RedColorViewModel.swift in Sources */,
 				2CCCBC1F20E167E6003A4BD4 /* AppDelegate.swift in Sources */,
 				2CCCBC3D20E168B5003A4BD4 /* BlueColorViewModel.swift in Sources */,
 				2CAD4BD920F8844F003CBE9C /* BlueColorViewController.swift in Sources */,

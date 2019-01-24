@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  AtlasDemo
-//
-//  Created by Engel, Stefan on 25.06.18.
-//  Copyright © 2018 dm-drogerie markt GmbH + Co. KG. All rights reserved.
-//
-
 import UIKit
 import Atlas
 
@@ -20,15 +12,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-        let model = EmptyModel()
+        let model = User()
         appCoordinator = MVVMCAppCoordinator(model: model, window: window!, factories: [BlueColorFactory(), GreenColorFactory()])
         appCoordinator.start()
 
         return true
-    }
-}
-
-extension AppDelegate: MVVMCViewDelegate {
-    func request(navigation request: MVVMCNavigationRequest, withData data: [String : Any]?) {
     }
 }

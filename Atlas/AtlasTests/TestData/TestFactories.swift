@@ -8,6 +8,10 @@ class StateFactory: MVVMCFactoryProtocol {
     }
 
     func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
+        if (model as! ModelMock).isLoggedIn {
+            return BlueTestViewController()
+        }
+
         return RedTestViewController()
     }
 }

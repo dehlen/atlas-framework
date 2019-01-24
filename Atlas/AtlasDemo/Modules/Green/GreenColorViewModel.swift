@@ -1,11 +1,3 @@
-//
-//  GreenColorViewModel.swift
-//  AtlasDemo
-//
-//  Created by Engel, Stefan on 25.06.18.
-//  Copyright © 2018 dm-drogerie markt GmbH + Co. KG. All rights reserved.
-//
-
 import Atlas
 
 class GreenColorViewModel: ColorViewModelProtocol {

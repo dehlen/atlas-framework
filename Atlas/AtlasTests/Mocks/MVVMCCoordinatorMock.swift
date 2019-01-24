@@ -9,7 +9,10 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     
     func start() {
     }
-    
+
+    func reload() {
+    }
+
     func startWithViewController() {
     }
     

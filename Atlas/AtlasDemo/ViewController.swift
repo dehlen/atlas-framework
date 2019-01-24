@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  AtlasDemo
-//
-//  Created by Engel, Stefan on 25.06.18.
-//  Copyright © 2018 dm-drogerie markt GmbH + Co. KG. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -19,7 +11,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

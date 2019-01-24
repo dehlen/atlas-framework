@@ -13,11 +13,19 @@ class BlueColorFactory: MVVMCTabBarFactoryProtocol {
     }
     
     public func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
-        let viewModel = BlueColorViewModel()
-        viewModel.delegate = delegate
-        let view = BlueColorViewController.create()
-        view.viewModel = viewModel
-        
-        return view
+        if let user = model as? User, user.loggedIn == true {
+            let viewModel = RedColorViewModel(model: model)
+            viewModel.delegate = delegate
+            let view = RedColorViewController.create()
+            view.viewModel = viewModel
+            return view
+        }
+        else {
+            let viewModel = BlueColorViewModel(model: model)
+            viewModel.delegate = delegate
+            let view = BlueColorViewController.create()
+            view.viewModel = viewModel
+            return view
+        }
     }
 }
