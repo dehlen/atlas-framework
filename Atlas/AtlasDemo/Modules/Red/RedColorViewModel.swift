@@ -1,8 +1,8 @@
 import UIKit
 import Atlas
 
-class BlueColorViewModel: ColorViewModelProtocol {
-    var backgroundColor: UIColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+class RedColorViewModel: ColorViewModelProtocol {
+    var backgroundColor: UIColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
     var delegate: MVVMCViewDelegate?
     var model: User
 
@@ -11,14 +11,14 @@ class BlueColorViewModel: ColorViewModelProtocol {
 
         model.register(observer: self)
     }
-    
+
     func navigate(viewController: UIViewController) {
         delegate?.request(navigation: MVVMCNavigationRequest.request(target: NavigationTargets.yellow), withData: nil)
     }
 }
 
 // MARK: - MVVMCModelObserver
-extension BlueColorViewModel: MVVMCModelObserver {
+extension RedColorViewModel: MVVMCModelObserver {
     func modelDidChange(model: MVVMCModelProtocol) {
         model.deregister(observer: self)
         delegate?.reload()
