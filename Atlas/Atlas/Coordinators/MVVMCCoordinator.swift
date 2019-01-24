@@ -20,6 +20,11 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
         let view = factory.createView(model: model, delegate: self)
         display(view: view, withTransitionType: factory.transitionType)
     }
+
+    func reload() {
+        dismissCurrentView(factory.transitionType)
+        start()
+    }
 }
 
 // MARK: - transitions
@@ -57,10 +62,17 @@ extension MVVMCCoordinator {
 // MARK: - MVVMCChildCoordinatorDelegate
 extension MVVMCCoordinator {
     func childCoordinatorRequestsDismissal(_ coordinator: MVVMCCoordinatorProtocol, transitionType: MVVMCTransitionType, animated: Bool) {
-        switch transitionType {
-            case .push: navigationController.popViewController(animated: animated)
-            case .modal: navigationController.dismiss(animated: animated, completion: nil)
-        }
+        dismissCurrentView(transitionType)
         targetCoordinator = nil
+    }
+}
+
+// MARK: - Handling the view controllers
+extension MVVMCCoordinator {
+    private func dismissCurrentView(_ transitionType: MVVMCTransitionType) {
+        switch transitionType {
+            case .push(let animated): navigationController.popViewController(animated: animated)
+            case .modal(let animated): navigationController.dismiss(animated: animated, completion: nil)
+        }
     }
 }
