@@ -42,13 +42,51 @@
                     <view key="view" contentMode="scaleToFill" id="Vk6-Ke-v7x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-50-Dcu">
+                                <rect key="frame" x="154" y="328.5" width="67" height="30"/>
+                                <state key="normal" title="PushView"/>
+                                <connections>
+                                    <action selector="push:" destination="gY1-nU-TUd" eventType="touchUpInside" id="A0v-hN-8pu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TNi-50-Dcu" firstAttribute="centerY" secondItem="DaS-12-XSO" secondAttribute="centerY" id="6yw-ZL-FaJ"/>
+                            <constraint firstItem="TNi-50-Dcu" firstAttribute="centerX" secondItem="DaS-12-XSO" secondAttribute="centerX" id="x6d-eo-tyZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DaS-12-XSO"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aJ-CG-fRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="149"/>
+            <point key="canvasLocation" x="-314" y="867"/>
+        </scene>
+        <!--White Color View Controller-->
+        <scene sceneID="rZw-jS-mLa">
+            <objects>
+                <viewController storyboardIdentifier="WhiteColorViewController" id="RFY-rQ-5ye" customClass="WhiteColorViewController" customModule="AtlasDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ihA-eI-GZw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udv-Eb-iDh">
+                                <rect key="frame" x="163" y="318" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="RFY-rQ-5ye" eventType="touchUpInside" id="usW-5d-tV9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qOU-mj-oqL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBf-g0-8PZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="867"/>
         </scene>
         <!--Red Color View Controller-->
         <scene sceneID="1vf-0O-XSO">
@@ -78,7 +116,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6e-Q2-hxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xT7-9A-6KV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="869"/>
+            <point key="canvasLocation" x="433" y="149"/>
         </scene>
         <!--Yellow Color View Controller-->
         <scene sceneID="LyO-Y4-rC5">
@@ -131,7 +169,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JE3-4D-U0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1319" y="149"/>
+            <point key="canvasLocation" x="1161" y="149"/>
+        </scene>
+        <!--Black Color View Controller-->
+        <scene sceneID="Z1s-Ib-5Dn">
+            <objects>
+                <viewController storyboardIdentifier="BlackColorViewController" id="eSe-cJ-u3z" customClass="BlackColorViewController" customModule="AtlasDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcD-t4-jWC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z46-z9-wQC">
+                                <rect key="frame" x="168" y="318" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="eSe-cJ-u3z" eventType="touchUpInside" id="S9y-6s-oc2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BvK-KR-L7y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMg-eG-uQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="867"/>
         </scene>
     </scenes>
 </document>
