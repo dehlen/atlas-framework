@@ -17,15 +17,15 @@ class GreenColorFactory: MVVMCTabBarFactoryProtocol {
     public var transitionType: Atlas.MVVMCTransitionType = .push(animated: false)
 
     public func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
-        return YellowColorFactory()
+        return WhiteColorFactory()
     }
 
     public func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
-        let viewModel = GreenColorViewModel()
+        let viewModel = GreenColorViewModel(model: model)
         viewModel.delegate = delegate
-        let view = GreenColorViewController()
-        view.viewModel = viewModel
+        let viewController = GreenColorViewController.create()
+        viewController.viewModel = viewModel
 
-        return view
+        return viewController
     }
 }
