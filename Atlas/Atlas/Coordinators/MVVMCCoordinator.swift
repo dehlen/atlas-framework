@@ -16,25 +16,25 @@ class MVVMCCoordinator {
 
 // MARK: - CoordinatorProtocol
 extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
-    func start() {
+    func start(skipAnimation: Bool = false) {
         let view = factory.createView(model: model, delegate: self)
         display(view: view, withTransitionType: factory.transitionType)
     }
 
     func reload() {
-        dismissCurrentView(factory.transitionType)
-        start()
+        dismissCurrentView(factory.transitionType, skipAnimation: true)
+        start(skipAnimation: true)
     }
 }
 
 // MARK: - transitions
 extension MVVMCCoordinator {
-    func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType) {
+    func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType, skipAnimation: Bool = false) {
         switch transitionType {
             case .modal(let animated):
-                navigationController.present(view, animated: animated)
+                navigationController.present(view, animated: skipAnimation ? false : animated)
             case .push(let animated):
-                navigationController.pushViewController(view, animated: animated)
+                navigationController.pushViewController(view, animated: skipAnimation ? false : animated)
         }
     }
 }
@@ -69,10 +69,10 @@ extension MVVMCCoordinator {
 
 // MARK: - Handling the view controllers
 extension MVVMCCoordinator {
-    private func dismissCurrentView(_ transitionType: MVVMCTransitionType) {
+    private func dismissCurrentView(_ transitionType: MVVMCTransitionType, skipAnimation: Bool = false) {
         switch transitionType {
-            case .push(let animated): navigationController.popViewController(animated: animated)
-            case .modal(let animated): navigationController.dismiss(animated: animated, completion: nil)
+            case .push(let animated): navigationController.popViewController(animated: skipAnimation ? false : animated)
+            case .modal(let animated): navigationController.dismiss(animated: skipAnimation ? false : animated, completion: nil)
         }
     }
 }
