@@ -7,7 +7,7 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     var didCallViewModelRequestsWithData = false
     var didRequestDismissal = false
     
-    func start() {
+    func start(skipAnimation: Bool = false) {
     }
 
     func reload() {
