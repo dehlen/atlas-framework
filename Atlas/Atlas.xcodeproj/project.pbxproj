@@ -65,6 +65,11 @@
 		2CF34BC51EFBBA4700BF531B /* UIViewController+PreloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */; };
 		2CF34BC81EFBBBF300BF531B /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC71EFBBBF300BF531B /* ModelMock.swift */; };
 		2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */; };
+		BE49F6EA21FB08D600428AB6 /* WhiteColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */; };
+		BE49F6EC21FB08E900428AB6 /* WhiteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */; };
+		BE49F6EE21FB0A3B00428AB6 /* WhiteColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */; };
+		BE49F6F321FB14CA00428AB6 /* BlackColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6F221FB14CA00428AB6 /* BlackColorViewModel.swift */; };
+		BE49F6F521FB14DB00428AB6 /* BlackColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6F421FB14DB00428AB6 /* BlackColorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +165,11 @@
 		2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PreloadView.swift"; sourceTree = "<group>"; };
 		2CF34BC71EFBBBF300BF531B /* ModelMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
 		2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewControllers.swift; sourceTree = "<group>"; };
+		BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorViewModel.swift; sourceTree = "<group>"; };
+		BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorViewController.swift; sourceTree = "<group>"; };
+		BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorFactory.swift; sourceTree = "<group>"; };
+		BE49F6F221FB14CA00428AB6 /* BlackColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackColorViewModel.swift; sourceTree = "<group>"; };
+		BE49F6F421FB14DB00428AB6 /* BlackColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackColorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +259,8 @@
 		2CCCBC3520E168B5003A4BD4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BE49F6F121FB143D00428AB6 /* Black */,
+				BE49F6E821FB04D900428AB6 /* White */,
 				2C208D7A21F9B97600F086CE /* Red */,
 				2CAD4BD120F8843C003CBE9C /* Green */,
 				2CCCBC3620E168B5003A4BD4 /* Blue */,
@@ -424,6 +436,25 @@
 				2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		BE49F6E821FB04D900428AB6 /* White */ = {
+			isa = PBXGroup;
+			children = (
+				BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */,
+				BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */,
+				BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */,
+			);
+			path = White;
+			sourceTree = "<group>";
+		};
+		BE49F6F121FB143D00428AB6 /* Black */ = {
+			isa = PBXGroup;
+			children = (
+				BE49F6F221FB14CA00428AB6 /* BlackColorViewModel.swift */,
+				BE49F6F421FB14DB00428AB6 /* BlackColorViewController.swift */,
+			);
+			path = Black;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,12 +639,17 @@
 				2C208D8221F9C20E00F086CE /* YellowViewModelProtocol.swift in Sources */,
 				2CAD4BD720F8843D003CBE9C /* GreenColorViewModel.swift in Sources */,
 				2CAD4BD520F8843D003CBE9C /* GreenColorFactory.swift in Sources */,
+				BE49F6EE21FB0A3B00428AB6 /* WhiteColorFactory.swift in Sources */,
+				BE49F6EA21FB08D600428AB6 /* WhiteColorViewModel.swift in Sources */,
 				2C208D7E21F9B99700F086CE /* RedColorViewModel.swift in Sources */,
+				BE49F6F521FB14DB00428AB6 /* BlackColorViewController.swift in Sources */,
 				2CCCBC1F20E167E6003A4BD4 /* AppDelegate.swift in Sources */,
+				BE49F6EC21FB08E900428AB6 /* WhiteColorViewController.swift in Sources */,
 				2CCCBC3D20E168B5003A4BD4 /* BlueColorViewModel.swift in Sources */,
 				2CAD4BD920F8844F003CBE9C /* BlueColorViewController.swift in Sources */,
 				2CAD4BD020F88428003CBE9C /* YellowColorViewController.swift in Sources */,
 				2CCCBC4120E168B5003A4BD4 /* YellowColorFactory.swift in Sources */,
+				BE49F6F321FB14CA00428AB6 /* BlackColorViewModel.swift in Sources */,
 				2CAD4BEB20F898A7003CBE9C /* ColorViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
