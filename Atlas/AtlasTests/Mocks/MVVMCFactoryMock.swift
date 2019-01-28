@@ -1,9 +1,20 @@
-//
-//  MVVMCFactoryMock.swift
-//  AtlasTests
-//
-//  Created by Engel, Stefan on 28.01.19.
-//  Copyright © 2019 dm-drogerie markt GmbH + Co. KG. All rights reserved.
-//
+import UIKit
+import Atlas
 
-import Foundation
+class MVVMCFactoryMock: MVVMCFactoryProtocol {
+    var transitionType: MVVMCTransitionType
+    var createViewCallCount = 0
+
+    init(transitionType: MVVMCTransitionType) {
+        self.transitionType = transitionType
+    }
+
+    func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
+        return nil
+    }
+
+    func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
+        createViewCallCount += 1
+        return UIViewController()
+    }
+}
