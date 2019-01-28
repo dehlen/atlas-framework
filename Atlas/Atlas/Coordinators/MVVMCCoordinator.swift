@@ -18,7 +18,7 @@ class MVVMCCoordinator {
 extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
     func start(skipAnimation: Bool = false) {
         let view = factory.createView(model: model, delegate: self)
-        display(view: view, withTransitionType: factory.transitionType)
+        display(view: view, withTransitionType: factory.transitionType, skipAnimation: skipAnimation)
     }
 
     func reload() {
@@ -29,7 +29,7 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
 
 // MARK: - transitions
 extension MVVMCCoordinator {
-    func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType, skipAnimation: Bool = false) {
+    private func display(view: UIViewController, withTransitionType transitionType: MVVMCTransitionType, skipAnimation: Bool) {
         switch transitionType {
             case .modal(let animated):
                 navigationController.present(view, animated: skipAnimation ? false : animated)

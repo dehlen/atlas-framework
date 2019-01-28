@@ -7,9 +7,9 @@ public enum MVVMCTransitionType {
 extension MVVMCTransitionType: Equatable {
     public static func == (lhs: MVVMCTransitionType, rhs: MVVMCTransitionType) -> Bool {
         switch (lhs, rhs) {
-        case (.modal(_), .modal(_)): return true
-        case (.push(_), .push(_)): return true
-        default: return false
+            case (.modal(let lhsAnimated), .modal(let rhsAnimated)): return lhsAnimated == rhsAnimated
+            case (.push(let lhsAnimated), .push(let rhsAnimated)): return lhsAnimated == rhsAnimated
+            default: return false
         }
     }
 }

@@ -49,6 +49,98 @@ class MVVMCCoordinatorTests: QuickSpec {
                 }
             }
 
+            context("with a factory that is used multiple times") {
+                var model: ModelMock?
+                var sut: MVVMCCoordinator?
+                var navigation: NavigationControllerMock?
+
+                beforeEach {
+                    navigation = NavigationControllerMock()
+                    model = ModelMock()
+                }
+
+                afterEach {
+                    model = nil
+                    navigation = nil
+                }
+
+                context("having an animated modal transition") {
+                    beforeEach {
+                        let factory = MVVMCFactoryMock(transitionType: .modal(animated: true))
+                        sut = MVVMCCoordinator(model: model!, navigationController: navigation!, factory: factory)
+                    }
+
+                    afterEach {
+                        sut = nil
+                    }
+
+                    context("calling start") {
+                        beforeEach {
+                            sut!.start()
+                        }
+
+                        it("calls present on the navigationController with animation") {
+                            expect(navigation!.transitions.count).to(equal(1))
+                            expect(navigation!.transitions.last).to(equal(.modal(animated: true)))
+                        }
+
+                        context("calling reload") {
+                            beforeEach {
+                                sut!.reload()
+                            }
+
+                            it("calls dismiss on the navigationController without animation") {
+                                expect(navigation!.dismissCalls.count).to(equal(1))
+                                expect(navigation!.dismissCalls.last).to(beFalse())
+                            }
+
+                            it("calls present on the navigationController without animation") {
+                                expect(navigation!.transitions.count).to(equal(2))
+                                expect(navigation!.transitions.last).to(equal(.modal(animated: false)))
+                            }
+                        }
+                    }
+                }
+
+                context("having an animated push transition") {
+                    beforeEach {
+                        let factory = MVVMCFactoryMock(transitionType: .push(animated: true))
+                        sut = MVVMCCoordinator(model: model!, navigationController: navigation!, factory: factory)
+                    }
+
+                    afterEach {
+                        sut = nil
+                    }
+
+                    context("calling start") {
+                        beforeEach {
+                            sut!.start()
+                        }
+
+                        it("calls present on the navigationController with animation") {
+                            expect(navigation!.transitions.count).to(equal(1))
+                            expect(navigation!.transitions.last).to(equal(.push(animated: true)))
+                        }
+
+                        context("calling reload") {
+                            beforeEach {
+                                sut!.reload()
+                            }
+
+                            it("calls dismiss on the navigationController without animation") {
+                                expect(navigation!.popCalls.count).to(equal(1))
+                                expect(navigation!.popCalls.last).to(beFalse())
+                            }
+
+                            it("calls present on the navigationController without animation") {
+                                expect(navigation!.transitions.count).to(equal(2))
+                                expect(navigation!.transitions.last).to(equal(.push(animated: false)))
+                            }
+                        }
+                    }
+                }
+            }
+
             context("with stateFactory") {
                 context("after calling start()") {
                     var sut: MVVMCCoordinator?
