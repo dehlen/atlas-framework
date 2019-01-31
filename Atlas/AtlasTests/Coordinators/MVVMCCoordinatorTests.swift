@@ -17,6 +17,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                         navigation = UINavigationController()
                         model = ModelMock()
                         sut = MVVMCCoordinator(model: model!, navigationController: navigation!, factory: factory)
+                        sut!.start()
                     }
 
                     afterEach {
@@ -26,8 +27,6 @@ class MVVMCCoordinatorTests: QuickSpec {
                     }
 
                     it("displays the red test view") {
-                        sut!.start()
-                        
                         expect(navigation!.topViewController).to(beAnInstanceOf(RedTestViewController.self))
                     }
 
@@ -43,6 +42,10 @@ class MVVMCCoordinatorTests: QuickSpec {
 
                             it("shows the new view") {
                                 expect(navigation!.topViewController).to(beAnInstanceOf(BlueTestViewController.self))
+                            }
+
+                            it("still has one view only within the hierarchy") {
+                                expect(navigation!.viewControllers.count).to(equal(1))
                             }
                         }
                     }
@@ -128,8 +131,9 @@ class MVVMCCoordinatorTests: QuickSpec {
                             }
 
                             it("calls dismiss on the navigationController without animation") {
-                                expect(navigation!.popCalls.count).to(equal(1))
-                                expect(navigation!.popCalls.last).to(beFalse())
+                                expect(navigation!.popCalls.count).to(equal(0))
+                                expect(navigation!.popCalls.last).to(beNil())
+                                expect(navigation!.viewControllers.count).to(equal(1))
                             }
 
                             it("calls present on the navigationController without animation") {
