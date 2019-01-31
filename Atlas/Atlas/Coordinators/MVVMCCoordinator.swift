@@ -71,7 +71,12 @@ extension MVVMCCoordinator {
 extension MVVMCCoordinator {
     private func dismissCurrentView(_ transitionType: MVVMCTransitionType, skipAnimation: Bool = false) {
         switch transitionType {
-            case .push(let animated): navigationController.popViewController(animated: skipAnimation ? false : animated)
+            case .push(let animated):
+                if (navigationController.viewControllers.count > 1) {
+                    navigationController.popViewController(animated: skipAnimation ? false : animated)
+                } else {
+                    navigationController.viewControllers = []
+                }
             case .modal(let animated): navigationController.dismiss(animated: skipAnimation ? false : animated, completion: nil)
         }
     }

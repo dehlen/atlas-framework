@@ -44,7 +44,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                                 expect(navigation!.topViewController).to(beAnInstanceOf(BlueTestViewController.self))
                             }
 
-                            fit("still has one view only within the hierarchy") {
+                            it("still has one view only within the hierarchy") {
                                 expect(navigation!.viewControllers.count).to(equal(1))
                             }
                         }
@@ -131,8 +131,8 @@ class MVVMCCoordinatorTests: QuickSpec {
                             }
 
                             it("calls dismiss on the navigationController without animation") {
-                                expect(navigation!.popCalls.count).to(equal(1))
-                                expect(navigation!.popCalls.last).to(beFalse())
+                                expect(navigation!.popCalls.count).to(equal(0))
+                                expect(navigation!.popCalls.last).to(beNil())
                             }
 
                             it("calls present on the navigationController without animation") {
