@@ -133,6 +133,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                             it("calls dismiss on the navigationController without animation") {
                                 expect(navigation!.popCalls.count).to(equal(0))
                                 expect(navigation!.popCalls.last).to(beNil())
+                                expect(navigation!.viewControllers.count).to(equal(1))
                             }
 
                             it("calls present on the navigationController without animation") {
