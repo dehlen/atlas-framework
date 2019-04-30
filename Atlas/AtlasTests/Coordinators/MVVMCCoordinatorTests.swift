@@ -51,6 +51,33 @@ class MVVMCCoordinatorTests: QuickSpec {
                     }
                 }
             }
+            
+            context("calling requestUpdate()") {
+                var model: ModelMock?
+                var sut: MVVMCCoordinator?
+                var navigation: UINavigationController?
+                var factory: MVVMCFactoryMock?
+                
+                beforeEach {
+                    factory = MVVMCFactoryMock(transitionType: .push(animated: false))
+                    navigation = UINavigationController()
+                    model = ModelMock()
+                    sut = MVVMCCoordinator(model: model!, navigationController: navigation!, factory: factory!)
+                    sut!.start()
+                    sut!.requestUpdate()
+                }
+                
+                afterEach {
+                    sut = nil
+                    model = nil
+                    navigation = nil
+                }
+                
+                it("calls update in the current factory") {
+                    expect(factory!.didCallUpdate).to(beTrue())
+                }
+            }
+
 
             context("with a factory that is used multiple times") {
                 var model: ModelMock?
