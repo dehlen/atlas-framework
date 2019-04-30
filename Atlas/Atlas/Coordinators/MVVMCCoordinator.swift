@@ -20,6 +20,10 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
         let view = factory.createView(model: model, delegate: self)
         display(view: view, withTransitionType: factory.transitionType, skipAnimation: skipAnimation)
     }
+    
+    func requestUpdate() {
+        factory.update()
+    }
 
     func reload() {
         dismissCurrentView(factory.transitionType, skipAnimation: true)
