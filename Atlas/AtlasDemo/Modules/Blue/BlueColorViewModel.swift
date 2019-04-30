@@ -21,6 +21,6 @@ class BlueColorViewModel: ColorViewModelProtocol {
 extension BlueColorViewModel: MVVMCModelObserver {
     func modelDidChange(model: MVVMCModelProtocol) {
         model.deregister(observer: self)
-        delegate?.reload()
+        delegate?.requestUpdate()
     }
 }
