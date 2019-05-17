@@ -46,9 +46,9 @@ class Feature1Factory: MVVMCTabBarFactoryProtocol {
     var prefersLargeTitles = true
     var selectedTabBarIconImage = UIImage.loadTestImage(named: "CircleSelected")
     var unselectedTabBarIconImage = UIImage.loadTestImage(named: "CircleUnselected")
-    
     var transitionType = MVVMCTransitionType.push(animated: false)
-    
+    var didSetupModule: ((UINavigationController, UITabBarController, MVVMCViewDelegate) -> Void)?
+
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
     }
@@ -64,9 +64,9 @@ class Feature2Factory: MVVMCTabBarFactoryProtocol {
     var prefersLargeTitles = true
     var selectedTabBarIconImage = UIImage.loadTestImage(named: "DiamondSelected")
     var unselectedTabBarIconImage = UIImage.loadTestImage(named: "DiamondUnselected")
-    
     var transitionType = MVVMCTransitionType.push(animated: false)
-    
+    var didSetupModule: ((UINavigationController, UITabBarController, MVVMCViewDelegate) -> Void)?
+
     func target(forIdentifier: MVVMCNavigationTarget) -> MVVMCFactoryProtocol? {
         return nil
     }
