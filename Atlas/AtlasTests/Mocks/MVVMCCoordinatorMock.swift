@@ -13,6 +13,9 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     func reload() {
     }
 
+    func requestUpdate() {
+    }
+
     func startWithViewController() {
     }
     

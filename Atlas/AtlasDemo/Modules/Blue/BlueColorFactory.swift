@@ -13,6 +13,7 @@ class BlueColorFactory: MVVMCTabBarFactoryProtocol {
     }
     
     public func createView(model: MVVMCModelProtocol, delegate: MVVMCViewDelegate) -> UIViewController {
+        // TODO: Use Container, see WhiteColorFactory
         if let user = model as? User, user.loggedIn == true {
             let viewModel = RedColorViewModel(model: model)
             viewModel.delegate = delegate
