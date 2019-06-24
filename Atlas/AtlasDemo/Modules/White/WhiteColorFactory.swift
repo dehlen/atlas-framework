@@ -43,7 +43,7 @@ class WhiteColorFactory: MVVMCFactoryProtocol {
         return container
     }
     
-    func update() {
+    func update(withData data: [String : Any]?) {
         currentView?.willMove(toParent: nil)
         currentView?.removeFromParent()
         currentView?.view.removeFromSuperview()
