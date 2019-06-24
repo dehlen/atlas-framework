@@ -21,8 +21,8 @@ extension MVVMCCoordinator: MVVMCCoordinatorProtocol {
         display(view: view, withTransitionType: factory.transitionType, skipAnimation: skipAnimation)
     }
     
-    func requestUpdate() {
-        factory.update()
+    func requestUpdate(withData data: [String : Any]?) {
+        factory.update(withData: data)
     }
 
     func reload() {
