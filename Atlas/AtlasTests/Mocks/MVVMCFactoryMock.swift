@@ -19,7 +19,7 @@ class MVVMCFactoryMock: MVVMCFactoryProtocol {
         return UIViewController()
     }
     
-    func update() {
+    func update(withData data: [String : Any]?) {
         didCallUpdate = true
     }
 }

@@ -9,6 +9,8 @@
 import Atlas
 
 class GreenColorFactory: MVVMCTabBarFactoryProtocol {
+    var didSetupModule: ((UINavigationController, UITabBarController, MVVMCViewDelegate) -> Void)?
+
     var prefersLargeTitles = true
 
     public var selectedTabBarIconImage = UIImage(named: "Heart")

@@ -13,7 +13,7 @@ class MVVMCCoordinatorMock: MVVMCCoordinatorProtocol {
     func reload() {
     }
 
-    func requestUpdate() {
+    func requestUpdate(withData data: [String : Any]?) {
     }
 
     func startWithViewController() {

@@ -64,7 +64,7 @@ class MVVMCCoordinatorTests: QuickSpec {
                     model = ModelMock()
                     sut = MVVMCCoordinator(model: model!, navigationController: navigation!, factory: factory!)
                     sut!.start()
-                    sut!.requestUpdate()
+                    sut!.requestUpdate(withData: nil)
                 }
                 
                 afterEach {
