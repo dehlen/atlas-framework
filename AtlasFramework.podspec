@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AtlasFramework"
-  s.version      = "1.0.8"
+  s.version      = "1.0.9"
   s.summary      = "Atlas is a framework that helps you structure your iOS app using the MVVM-C architecture pattern."
   s.description  = <<-DESC
   Atlas is a framework that helps you structure your iOS app using the MVVM-C architecture pattern.
@@ -8,9 +8,8 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://stash.dm-drogeriemarkt.com/projects/OSI/repos/atlas/browse"
   s.license      = { :type => "MIT", :file => "LICENSE.txt" }
-  s.author             = { 
-  	"Engel, Stefan" => "stefan.engel@dm.de",
-  	"Olbrich, Jan" => "jan.olbrich@dm.de" 
+  s.author             = {
+  	"Engel, Stefan" => "stefan.engel@dm.de"
   }
   s.source       = { :git => "https://stash.dm-drogeriemarkt.com/scm/osi/atlas.git", :tag => "#{s.version}" }
   s.source_files  = "Atlas/Atlas/**/*.{h,m,swift}"
