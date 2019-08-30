@@ -67,6 +67,7 @@
 		2CF34BC51EFBBA4700BF531B /* UIViewController+PreloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */; };
 		2CF34BC81EFBBBF300BF531B /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC71EFBBBF300BF531B /* ModelMock.swift */; };
 		2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */; };
+		444F99CA2319037700151DE4 /* UserObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444F99C92319037700151DE4 /* UserObserverProtocol.swift */; };
 		BE49F6EA21FB08D600428AB6 /* WhiteColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */; };
 		BE49F6EC21FB08E900428AB6 /* WhiteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */; };
 		BE49F6EE21FB0A3B00428AB6 /* WhiteColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */; };
@@ -169,6 +170,7 @@
 		2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PreloadView.swift"; sourceTree = "<group>"; };
 		2CF34BC71EFBBBF300BF531B /* ModelMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
 		2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewControllers.swift; sourceTree = "<group>"; };
+		444F99C92319037700151DE4 /* UserObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObserverProtocol.swift; sourceTree = "<group>"; };
 		BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorViewModel.swift; sourceTree = "<group>"; };
 		BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorViewController.swift; sourceTree = "<group>"; };
 		BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorFactory.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */,
 				2CCCBC4320E16905003A4BD4 /* User.swift */,
+				444F99C92319037700151DE4 /* UserObserverProtocol.swift */,
 				2CCCBC4620E16905003A4BD4 /* NavigationTargets.swift */,
 				2CCCBC3520E168B5003A4BD4 /* Modules */,
 				2CCCBC1E20E167E6003A4BD4 /* AppDelegate.swift */,
@@ -657,6 +660,7 @@
 				BE49F6EA21FB08D600428AB6 /* WhiteColorViewModel.swift in Sources */,
 				2C208D7E21F9B99700F086CE /* RedColorViewModel.swift in Sources */,
 				BE49F6F521FB14DB00428AB6 /* BlackColorViewController.swift in Sources */,
+				444F99CA2319037700151DE4 /* UserObserverProtocol.swift in Sources */,
 				2CCCBC1F20E167E6003A4BD4 /* AppDelegate.swift in Sources */,
 				BE49F6EC21FB08E900428AB6 /* WhiteColorViewController.swift in Sources */,
 				2CCCBC3D20E168B5003A4BD4 /* BlueColorViewModel.swift in Sources */,

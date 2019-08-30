@@ -7,7 +7,7 @@ class User {
         }
     }
 
-    var observers: [MVVMCModelObserver] = []
+    var observers: [UserObserverProtocol] = []
 
     func login() {
         loggedIn = true
@@ -22,20 +22,19 @@ class User {
 extension User {
     func notifyObservers() {
         for observer in observers {
-            observer.modelDidChange(model: self)
+            observer.didUpdateUser(self)
         }
     }
-}
 
-// MARK: - MVVMModelProtocol
-extension User: MVVMCModelProtocol {
-    public func register(observer: MVVMCModelObserver) {
+    public func register(observer: UserObserverProtocol) {
         if !observers.contains(where: { $0 === observer }) {
             observers.append(observer)
         }
     }
 
-    public func deregister(observer: MVVMCModelObserver) {
+    public func deregister(observer: UserObserverProtocol) {
         observers = observers.filter { $0 !== observer }
     }
 }
+
+extension User: MVVMCModelProtocol {}
