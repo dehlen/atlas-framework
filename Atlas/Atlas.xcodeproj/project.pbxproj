@@ -28,7 +28,6 @@
 		2CAD4BD720F8843D003CBE9C /* GreenColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BD420F8843C003CBE9C /* GreenColorViewModel.swift */; };
 		2CAD4BD920F8844F003CBE9C /* BlueColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BD820F8844F003CBE9C /* BlueColorViewController.swift */; };
 		2CAD4BEB20F898A7003CBE9C /* ColorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */; };
-		2CB43B7D214F85890038F4C4 /* MVVMCModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB43B7C214F85890038F4C4 /* MVVMCModelObserver.swift */; };
 		2CCB99E71F04EFA800C95527 /* MVVMCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99E61F04EFA800C95527 /* MVVMCCoordinator.swift */; };
 		2CCB99E91F04EFBF00C95527 /* MVVMCFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99E81F04EFBF00C95527 /* MVVMCFactoryProtocol.swift */; };
 		2CCB99EB1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99EA1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift */; };
@@ -128,7 +127,6 @@
 		2CAD4BD420F8843C003CBE9C /* GreenColorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenColorViewModel.swift; sourceTree = "<group>"; };
 		2CAD4BD820F8844F003CBE9C /* BlueColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueColorViewController.swift; sourceTree = "<group>"; };
 		2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewModelProtocol.swift; sourceTree = "<group>"; };
-		2CB43B7C214F85890038F4C4 /* MVVMCModelObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCModelObserver.swift; sourceTree = "<group>"; };
 		2CCB99E61F04EFA800C95527 /* MVVMCCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCCoordinator.swift; sourceTree = "<group>"; };
 		2CCB99E81F04EFBF00C95527 /* MVVMCFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCFactoryProtocol.swift; sourceTree = "<group>"; };
 		2CCB99EA1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCCoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -362,7 +360,6 @@
 				2CCB99EC1F04F00600C95527 /* MVVMCChildCoordinatorDelegate.swift */,
 				2CF34BA81EFBB47D00BF531B /* MVVMCViewDelegate.swift */,
 				2CF34B971EFBB36F00BF531B /* MVVMCModelProtocol.swift */,
-				2CB43B7C214F85890038F4C4 /* MVVMCModelObserver.swift */,
 				2C374C051F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift */,
 			);
 			path = Protocols;
@@ -675,7 +672,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB43B7D214F85890038F4C4 /* MVVMCModelObserver.swift in Sources */,
 				2CF34BA31EFBB3F100BF531B /* UIView+Pinable.swift in Sources */,
 				2CCB99ED1F04F00600C95527 /* MVVMCChildCoordinatorDelegate.swift in Sources */,
 				2CCB99F11F04F04300C95527 /* MVVMCTransitionType.swift in Sources */,
