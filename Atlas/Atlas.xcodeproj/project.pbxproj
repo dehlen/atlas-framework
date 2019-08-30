@@ -28,7 +28,6 @@
 		2CAD4BD720F8843D003CBE9C /* GreenColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BD420F8843C003CBE9C /* GreenColorViewModel.swift */; };
 		2CAD4BD920F8844F003CBE9C /* BlueColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BD820F8844F003CBE9C /* BlueColorViewController.swift */; };
 		2CAD4BEB20F898A7003CBE9C /* ColorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */; };
-		2CB43B7D214F85890038F4C4 /* MVVMCModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB43B7C214F85890038F4C4 /* MVVMCModelObserver.swift */; };
 		2CCB99E71F04EFA800C95527 /* MVVMCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99E61F04EFA800C95527 /* MVVMCCoordinator.swift */; };
 		2CCB99E91F04EFBF00C95527 /* MVVMCFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99E81F04EFBF00C95527 /* MVVMCFactoryProtocol.swift */; };
 		2CCB99EB1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB99EA1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift */; };
@@ -68,6 +67,7 @@
 		2CF34BC51EFBBA4700BF531B /* UIViewController+PreloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */; };
 		2CF34BC81EFBBBF300BF531B /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34BC71EFBBBF300BF531B /* ModelMock.swift */; };
 		2CF80BAF1F3319E400CA6695 /* TestViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */; };
+		444F99CA2319037700151DE4 /* UserObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444F99C92319037700151DE4 /* UserObserverProtocol.swift */; };
 		BE49F6EA21FB08D600428AB6 /* WhiteColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */; };
 		BE49F6EC21FB08E900428AB6 /* WhiteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */; };
 		BE49F6EE21FB0A3B00428AB6 /* WhiteColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */; };
@@ -128,7 +128,6 @@
 		2CAD4BD420F8843C003CBE9C /* GreenColorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenColorViewModel.swift; sourceTree = "<group>"; };
 		2CAD4BD820F8844F003CBE9C /* BlueColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueColorViewController.swift; sourceTree = "<group>"; };
 		2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewModelProtocol.swift; sourceTree = "<group>"; };
-		2CB43B7C214F85890038F4C4 /* MVVMCModelObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCModelObserver.swift; sourceTree = "<group>"; };
 		2CCB99E61F04EFA800C95527 /* MVVMCCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCCoordinator.swift; sourceTree = "<group>"; };
 		2CCB99E81F04EFBF00C95527 /* MVVMCFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCFactoryProtocol.swift; sourceTree = "<group>"; };
 		2CCB99EA1F04EFC800C95527 /* MVVMCCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCCoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -171,6 +170,7 @@
 		2CF34BC41EFBBA4700BF531B /* UIViewController+PreloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PreloadView.swift"; sourceTree = "<group>"; };
 		2CF34BC71EFBBBF300BF531B /* ModelMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
 		2CF80BAE1F3319E400CA6695 /* TestViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewControllers.swift; sourceTree = "<group>"; };
+		444F99C92319037700151DE4 /* UserObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObserverProtocol.swift; sourceTree = "<group>"; };
 		BE49F6E921FB08D600428AB6 /* WhiteColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorViewModel.swift; sourceTree = "<group>"; };
 		BE49F6EB21FB08E900428AB6 /* WhiteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorViewController.swift; sourceTree = "<group>"; };
 		BE49F6ED21FB0A3B00428AB6 /* WhiteColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteColorFactory.swift; sourceTree = "<group>"; };
@@ -258,6 +258,7 @@
 			children = (
 				2CAD4BE820F898A7003CBE9C /* ColorViewModelProtocol.swift */,
 				2CCCBC4320E16905003A4BD4 /* User.swift */,
+				444F99C92319037700151DE4 /* UserObserverProtocol.swift */,
 				2CCCBC4620E16905003A4BD4 /* NavigationTargets.swift */,
 				2CCCBC3520E168B5003A4BD4 /* Modules */,
 				2CCCBC1E20E167E6003A4BD4 /* AppDelegate.swift */,
@@ -362,7 +363,6 @@
 				2CCB99EC1F04F00600C95527 /* MVVMCChildCoordinatorDelegate.swift */,
 				2CF34BA81EFBB47D00BF531B /* MVVMCViewDelegate.swift */,
 				2CF34B971EFBB36F00BF531B /* MVVMCModelProtocol.swift */,
-				2CB43B7C214F85890038F4C4 /* MVVMCModelObserver.swift */,
 				2C374C051F176239002F4CD1 /* MVVMCTabBarFactoryProtocol.swift */,
 			);
 			path = Protocols;
@@ -660,6 +660,7 @@
 				BE49F6EA21FB08D600428AB6 /* WhiteColorViewModel.swift in Sources */,
 				2C208D7E21F9B99700F086CE /* RedColorViewModel.swift in Sources */,
 				BE49F6F521FB14DB00428AB6 /* BlackColorViewController.swift in Sources */,
+				444F99CA2319037700151DE4 /* UserObserverProtocol.swift in Sources */,
 				2CCCBC1F20E167E6003A4BD4 /* AppDelegate.swift in Sources */,
 				BE49F6EC21FB08E900428AB6 /* WhiteColorViewController.swift in Sources */,
 				2CCCBC3D20E168B5003A4BD4 /* BlueColorViewModel.swift in Sources */,
@@ -675,7 +676,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB43B7D214F85890038F4C4 /* MVVMCModelObserver.swift in Sources */,
 				2CF34BA31EFBB3F100BF531B /* UIView+Pinable.swift in Sources */,
 				2CCB99ED1F04F00600C95527 /* MVVMCChildCoordinatorDelegate.swift in Sources */,
 				2CCB99F11F04F04300C95527 /* MVVMCTransitionType.swift in Sources */,

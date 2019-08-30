@@ -66,3 +66,6 @@ Atlas/fastlane/README.md
 
 # xcov
 Atlas/fastlane/xcov_report
+
+#Misc
+*.DS_Store
