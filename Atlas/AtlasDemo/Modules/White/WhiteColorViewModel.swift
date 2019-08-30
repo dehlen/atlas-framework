@@ -8,8 +8,7 @@ class WhiteColorViewModel: ColorViewModelProtocol {
 
     init(model: MVVMCModelProtocol) {
         self.model = model as! User
-
-        model.register(observer: self)
+        self.model.register(observer: self)
     }
 
     func navigate(viewController: UIViewController) {
@@ -18,8 +17,8 @@ class WhiteColorViewModel: ColorViewModelProtocol {
 }
 
 // MARK: - MVVMCModelObserver
-extension WhiteColorViewModel: MVVMCModelObserver {
-    func modelDidChange(model: MVVMCModelProtocol) {
+extension WhiteColorViewModel: UserObserverProtocol {
+    func didUpdateUser(_ user: User) {
         model.deregister(observer: self)
         delegate?.requestUpdate(withData: nil)
     }

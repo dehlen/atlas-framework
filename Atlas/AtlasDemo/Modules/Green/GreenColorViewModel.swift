@@ -7,16 +7,15 @@ class GreenColorViewModel: ColorViewModelProtocol {
 
     init(model: MVVMCModelProtocol) {
         self.model = model as! User
-
-        model.register(observer: self)
+        self.model.register(observer: self)
     }
 
     func navigate(viewController: UIViewController) {
         delegate?.request(navigation: MVVMCNavigationRequest.request(target: NavigationTargets.white), withData: nil)
     }
 }
-extension GreenColorViewModel: MVVMCModelObserver {
-    func modelDidChange(model: MVVMCModelProtocol) {
+extension GreenColorViewModel: UserObserverProtocol {
+    func didUpdateUser(_ user: User) {
         model.deregister(observer: self)
         delegate?.requestUpdate(withData: nil)
     }
