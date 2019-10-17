@@ -11,11 +11,15 @@ class MVVMCAppCoordinatorTests: QuickSpec {
             var rootViewController: UITabBarController?
             
             context("initialized with 2 factories") {
+                var testFactory1: MVVMCTabBarFactoryProtocol!
+                var testFactory2: MVVMCTabBarFactoryProtocol!
+                
                 context("calling start()") {
                     beforeEach {
                         window = UIWindow()
-                        
-                        sut = MVVMCAppCoordinator(model: ModelMock(), window: window!, factories: [Feature1Factory(), Feature2Factory()])
+                        testFactory1 = Feature1Factory()
+                        testFactory2 = Feature2Factory()
+                        sut = MVVMCAppCoordinator(model: ModelMock(), window: window!, factories: [testFactory1, testFactory2])
                         sut!.start()
                     }
                     
@@ -46,8 +50,8 @@ class MVVMCAppCoordinatorTests: QuickSpec {
                             expect(topMostViewController?.tabBarController).notTo(beNil())
                         }
                         
-                        it("has no title") {
-                            expect(rootViewController?.tabBarItem.title).to(beNil())
+                        it("has a title") {
+                            expect(topMostViewController?.navigationController?.tabBarItem.title).to(equal(testFactory1.tabBarItemTitle))
                         }
                         
                         it("creates a tabBar with 2 elements") {
@@ -87,11 +91,15 @@ class MVVMCAppCoordinatorTests: QuickSpec {
                     }
                     
                     context("switching to second Tab") {
+                        var currentNavigationController: UINavigationController?
+                        
                         beforeEach {
-                            sut!.tabBar.delegate?.tabBarController!((sut?.tabBar)!, didSelect: (sut?.modules[1].navigationController)!)
+                        sut!.tabBar.delegate?.tabBarController!((sut?.tabBar)!, didSelect: (sut?.modules[1].navigationController)!)
                             sut!.tabBar.selectedIndex = 1
                             
                             rootViewController = window!.rootViewController as? UITabBarController
+                            
+                            currentNavigationController = rootViewController?.selectedViewController as! UINavigationController
                         }
                         
                         afterEach {
@@ -102,8 +110,8 @@ class MVVMCAppCoordinatorTests: QuickSpec {
                             expect((rootViewController?.selectedViewController as! UINavigationController).topViewController).to(beAnInstanceOf(BlueTestViewController.self))
                         }
                         
-                        it("has no title") {
-                            expect(rootViewController?.tabBarItem.title).to(beNil())
+                        it("has a title") {
+                            expect(currentNavigationController?.tabBarItem.title).to(equal(testFactory2.tabBarItemTitle))
                         }
 
                         it("keeps the other view") {
